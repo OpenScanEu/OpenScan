@@ -11,7 +11,7 @@
         "id": "9096e101.facd1",
         "type": "tab",
         "label": "External Cam",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
