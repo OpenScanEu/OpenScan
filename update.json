@@ -4,7 +4,7 @@
         "id": "4d24a982.7bf068",
         "type": "tab",
         "label": "RPi Cam",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
