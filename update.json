@@ -5940,5 +5940,20 @@
             [],
             []
         ]
+    },
+    {
+        "id": "621010ef.75ada",
+        "type": "function",
+        "z": "797c4da3.38d3c4",
+        "name": "",
+        "func": "msg.payload =\"no update available\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1036.01953125,
+        "y": 550.00390625,
+        "wires": [
+            []
+        ]
     }
+
 ]
