@@ -4,14 +4,14 @@
         "id": "4d24a982.7bf068",
         "type": "tab",
         "label": "RPi Cam",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
         "id": "9096e101.facd1",
         "type": "tab",
         "label": "External Cam",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
