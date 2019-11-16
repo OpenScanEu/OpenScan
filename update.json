@@ -5777,9 +5777,7 @@
         "x": 1316.0195121765137,
         "y": 476.00389671325684,
         "wires": [
-            [
-                "c679703b.0cdb1"
-            ]
+            []
         ]
     },
     {
@@ -5820,21 +5818,6 @@
         ],
         "x": 1474.0218172073364,
         "y": 736.9972972869873,
-        "wires": []
-    },
-    {
-        "id": "c679703b.0cdb1",
-        "type": "debug",
-        "z": "797c4da3.38d3c4",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1491.01953125,
-        "y": 512.00390625,
         "wires": []
     },
     {
