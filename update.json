@@ -405,42 +405,6 @@
         "collapse": false
     },
     {
-        "id": "1e8e0f75.323111",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "aa12c1f4.a677e",
-        "order": 4,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "759527b8.069e98",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "aa12c1f4.a677e",
-        "order": 8,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "faec6b23.f40078",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "aa12c1f4.a677e",
-        "order": 13,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "a866ec4e.9767c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "aa12c1f4.a677e",
-        "order": 16,
-        "width": 6,
-        "height": 1
-    },
-    {
         "id": "5d12f9cd.9c4a88",
         "type": "ui_spacer",
         "name": "spacer",
@@ -517,17 +481,6 @@
         "height": 1
     },
     {
-        "id": "fffaebc5.16f0f8",
-        "type": "ui_group",
-        "z": "",
-        "name": "test",
-        "tab": "",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "a0e6e69a.466e28",
         "type": "ui_tab",
         "z": "",
@@ -549,7 +502,7 @@
         "collapse": false
     },
     {
-        "id": "352382c0.8af8ae",
+        "id": "10bbbe95.9a8c61",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "6bdd5033.f67e",
@@ -558,20 +511,38 @@
         "height": 1
     },
     {
-        "id": "d768da16.4e4648",
+        "id": "b93b0109.0b358",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "6bdd5033.f67e",
-        "order": 5,
+        "group": "aa12c1f4.a677e",
+        "order": 7,
         "width": 6,
         "height": 1
     },
     {
-        "id": "6f99c51c.363f7c",
+        "id": "94294d73.5d2ea",
         "type": "ui_spacer",
         "name": "spacer",
-        "group": "6bdd5033.f67e",
-        "order": 6,
+        "group": "aa12c1f4.a677e",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "8cebd544.663348",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "aa12c1f4.a677e",
+        "order": 13,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "2cc49668.df3f9a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "aa12c1f4.a677e",
+        "order": 16,
         "width": 6,
         "height": 1
     },
@@ -749,7 +720,7 @@
         "z": "4d24a982.7bf068",
         "name": "",
         "group": "aa12c1f4.a677e",
-        "order": 6,
+        "order": 5,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -775,7 +746,7 @@
         "z": "4d24a982.7bf068",
         "name": "",
         "group": "aa12c1f4.a677e",
-        "order": 7,
+        "order": 6,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -852,7 +823,7 @@
         "type": "ui_text",
         "z": "4d24a982.7bf068",
         "group": "aa12c1f4.a677e",
-        "order": 5,
+        "order": 4,
         "width": 2,
         "height": 1,
         "name": "",
@@ -1452,8 +1423,8 @@
         "tooltip": "",
         "group": "aa12c1f4.a677e",
         "order": 15,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "decouple": "false",
         "topic": "",
@@ -1571,8 +1542,8 @@
         "tooltip": "",
         "group": "aa12c1f4.a677e",
         "order": 14,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "decouple": "false",
         "topic": "",
@@ -5456,25 +5427,6 @@
         ]
     },
     {
-        "id": "524637f.3b268c8",
-        "type": "exec",
-        "z": "797c4da3.38d3c4",
-        "command": "sudo cp /home/pi/.node-red/flows_raspberrypi.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 699.0104064941406,
-        "y": 124.32637786865234,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "364609b5.2033d6",
         "type": "exec",
         "z": "797c4da3.38d3c4",
@@ -5697,7 +5649,6 @@
             [],
             [],
             [
-                "502444dd.53e76c",
                 "ff0ab073.f0f41"
             ]
         ]
@@ -5848,11 +5799,11 @@
         "type": "function",
         "z": "797c4da3.38d3c4",
         "name": "",
-        "func": "msg.payload =\"update done\"\nreturn msg;",
+        "func": "msg.payload =\"rebooting\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1257.0195274353027,
-        "y": 662.0039043426514,
+        "x": 1382.0195274353027,
+        "y": 737.0039205551147,
         "wires": [
             [
                 "280324ed.a3726c"
@@ -5867,35 +5818,9 @@
         "links": [
             "a2cab9db.37a378"
         ],
-        "x": 1370.0217571258545,
-        "y": 661.9973278045654,
+        "x": 1474.0218172073364,
+        "y": 736.9972972869873,
         "wires": []
-    },
-    {
-        "id": "d6143fa6.94b68",
-        "type": "ui_button",
-        "z": "797c4da3.38d3c4",
-        "name": "",
-        "group": "6bdd5033.f67e",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "overwrite",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 79.01953125,
-        "y": 124.00390625,
-        "wires": [
-            [
-                "524637f.3b268c8"
-            ]
-        ]
     },
     {
         "id": "c679703b.0cdb1",
@@ -5937,8 +5862,8 @@
         "links": [
             "543b8cc6.11f404"
         ],
-        "x": 1360.0077953338623,
-        "y": 725.8671712875366,
+        "x": 1348.007779121399,
+        "y": 772.8672313690186,
         "wires": []
     },
     {
@@ -5978,11 +5903,59 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 1205.015609741211,
-        "y": 728.8827953338623,
+        "y": 735.8827953338623,
         "wires": [
             [
-                "ac9852eb.d953f"
+                "ac9852eb.d953f",
+                "502444dd.53e76c"
             ]
+        ]
+    },
+    {
+        "id": "e57dafee.5dec5",
+        "type": "ui_button",
+        "z": "797c4da3.38d3c4",
+        "name": "",
+        "group": "6bdd5033.f67e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset to last update",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 107.01953125,
+        "y": 789.00390625,
+        "wires": [
+            [
+                "3c4a73fc.89986c"
+            ]
+        ]
+    },
+    {
+        "id": "3c4a73fc.89986c",
+        "type": "exec",
+        "z": "797c4da3.38d3c4",
+        "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 717.01953125,
+        "y": 790.00390625,
+        "wires": [
+            [
+                "56e80cb1.9b10d4"
+            ],
+            [],
+            []
         ]
     }
 ]
