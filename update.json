@@ -5697,7 +5697,8 @@
             [],
             [],
             [
-                "93259add.a5d138"
+                "502444dd.53e76c",
+                "ff0ab073.f0f41"
             ]
         ]
     },
@@ -5825,7 +5826,9 @@
         "x": 1316.0195121765137,
         "y": 476.00389671325684,
         "wires": [
-            []
+            [
+                "c679703b.0cdb1"
+            ]
         ]
     },
     {
@@ -5845,15 +5848,14 @@
         "type": "function",
         "z": "797c4da3.38d3c4",
         "name": "",
-        "func": "msg.payload =\"rebooting\"\nreturn msg;",
+        "func": "msg.payload =\"update done\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1237.01957321167,
-        "y": 808.0039348602295,
+        "x": 1257.0195274353027,
+        "y": 662.0039043426514,
         "wires": [
             [
-                "280324ed.a3726c",
-                "651543d2.56afdc"
+                "280324ed.a3726c"
             ]
         ]
     },
@@ -5896,7 +5898,51 @@
         ]
     },
     {
-        "id": "93259add.a5d138",
+        "id": "c679703b.0cdb1",
+        "type": "debug",
+        "z": "797c4da3.38d3c4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1491.01953125,
+        "y": 512.00390625,
+        "wires": []
+    },
+    {
+        "id": "543b8cc6.11f404",
+        "type": "link in",
+        "z": "6fff9eb6.3efc2",
+        "name": "reboot",
+        "links": [
+            "ac9852eb.d953f"
+        ],
+        "x": 33.01562309265137,
+        "y": 36.953125,
+        "wires": [
+            [
+                "d166c44e.c867d8",
+                "4dcdb482.ed48cc"
+            ]
+        ]
+    },
+    {
+        "id": "ac9852eb.d953f",
+        "type": "link out",
+        "z": "797c4da3.38d3c4",
+        "name": "",
+        "links": [
+            "543b8cc6.11f404"
+        ],
+        "x": 1360.0077953338623,
+        "y": 725.8671712875366,
+        "wires": []
+    },
+    {
+        "id": "ff0ab073.f0f41",
         "type": "exec",
         "z": "797c4da3.38d3c4",
         "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi.json",
@@ -5906,47 +5952,18 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 723.01953125,
-        "y": 720.00390625,
+        "x": 719.01953125,
+        "y": 723.0039348602295,
         "wires": [
             [],
             [],
             [
-                "b49eb5cc.90ce48"
+                "56e80cb1.9b10d4"
             ]
         ]
     },
     {
-        "id": "a1b83949.c84718",
-        "type": "link in",
-        "z": "6fff9eb6.3efc2",
-        "name": "reboot",
-        "links": [
-            "651543d2.56afdc"
-        ],
-        "x": 121.01171493530273,
-        "y": 36.94921875,
-        "wires": [
-            [
-                "d166c44e.c867d8",
-                "3c31fe48.03eeb2"
-            ]
-        ]
-    },
-    {
-        "id": "651543d2.56afdc",
-        "type": "link out",
-        "z": "797c4da3.38d3c4",
-        "name": "",
-        "links": [
-            "a1b83949.c84718"
-        ],
-        "x": 1405.0156831741333,
-        "y": 775.8788890838623,
-        "wires": []
-    },
-    {
-        "id": "b49eb5cc.90ce48",
+        "id": "56e80cb1.9b10d4",
         "type": "delay",
         "z": "797c4da3.38d3c4",
         "name": "",
@@ -5960,11 +5977,11 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1208.0195579528809,
-        "y": 733.0039348602295,
+        "x": 1205.015609741211,
+        "y": 728.8827953338623,
         "wires": [
             [
-                "502444dd.53e76c"
+                "ac9852eb.d953f"
             ]
         ]
     }
