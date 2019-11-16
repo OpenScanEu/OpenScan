@@ -5697,7 +5697,7 @@
             [],
             [],
             [
-                "502444dd.53e76c"
+                "93259add.a5d138"
             ]
         ]
     },
@@ -5714,8 +5714,7 @@
         "wires": [
             [
                 "9cbd682b.0a45b8",
-                "4d782c72.681d64",
-                "2f96ba1a.31c556"
+                "4d782c72.681d64"
             ]
         ]
     },
@@ -5826,9 +5825,7 @@
         "x": 1316.0195121765137,
         "y": 476.00389671325684,
         "wires": [
-            [
-                "c679703b.0cdb1"
-            ]
+            []
         ]
     },
     {
@@ -5848,14 +5845,15 @@
         "type": "function",
         "z": "797c4da3.38d3c4",
         "name": "",
-        "func": "msg.payload =\"update done\"\nreturn msg;",
+        "func": "msg.payload =\"rebooting\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1257.0195274353027,
-        "y": 662.0039043426514,
+        "x": 1237.01957321167,
+        "y": 808.0039348602295,
         "wires": [
             [
-                "280324ed.a3726c"
+                "280324ed.a3726c",
+                "651543d2.56afdc"
             ]
         ]
     },
@@ -5898,33 +5896,76 @@
         ]
     },
     {
-        "id": "2f96ba1a.31c556",
-        "type": "debug",
+        "id": "93259add.a5d138",
+        "type": "exec",
+        "z": "797c4da3.38d3c4",
+        "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi.json",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 723.01953125,
+        "y": 720.00390625,
+        "wires": [
+            [],
+            [],
+            [
+                "b49eb5cc.90ce48"
+            ]
+        ]
+    },
+    {
+        "id": "a1b83949.c84718",
+        "type": "link in",
+        "z": "6fff9eb6.3efc2",
+        "name": "reboot",
+        "links": [
+            "651543d2.56afdc"
+        ],
+        "x": 121.01171493530273,
+        "y": 36.94921875,
+        "wires": [
+            [
+                "d166c44e.c867d8",
+                "3c31fe48.03eeb2"
+            ]
+        ]
+    },
+    {
+        "id": "651543d2.56afdc",
+        "type": "link out",
         "z": "797c4da3.38d3c4",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 425.0234375,
-        "y": 556.91796875,
+        "links": [
+            "a1b83949.c84718"
+        ],
+        "x": 1405.0156831741333,
+        "y": 775.8788890838623,
         "wires": []
     },
     {
-        "id": "c679703b.0cdb1",
-        "type": "debug",
+        "id": "b49eb5cc.90ce48",
+        "type": "delay",
         "z": "797c4da3.38d3c4",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1491.01953125,
-        "y": 512.00390625,
-        "wires": []
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1208.0195579528809,
+        "y": 733.0039348602295,
+        "wires": [
+            [
+                "502444dd.53e76c"
+            ]
+        ]
     }
 ]
