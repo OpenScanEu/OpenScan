@@ -5504,7 +5504,7 @@
         "z": "797c4da3.38d3c4",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
+        "timeout": "10",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
