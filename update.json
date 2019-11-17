@@ -5506,7 +5506,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 650.3984298706055,
-        "y": 237.28126335144043,
+        "y": 236.28126335144043,
         "wires": []
     },
     {
@@ -5538,7 +5538,7 @@
         "type": "ui_text",
         "z": "8d5a7804.52acf8",
         "group": "f7451b10.d6c048",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -5607,7 +5607,8 @@
         "z": "8d5a7804.52acf8",
         "name": "New Update Note",
         "links": [
-            "c986d5f5.bba4f8"
+            "c986d5f5.bba4f8",
+            "edf1402c.a1828"
         ],
         "x": 486.39064502716064,
         "y": 381.8867406845093,
@@ -5967,7 +5968,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1542.019702911377,
+        "x": 1544.019702911377,
         "y": 346.7968921661377,
         "wires": [
             []
@@ -6237,7 +6238,8 @@
         "y": 817.0104484558105,
         "wires": [
             [
-                "bf685ce2.3d634"
+                "bf685ce2.3d634",
+                "96417bb1.725ca8"
             ]
         ]
     },
@@ -6245,10 +6247,10 @@
         "id": "bf685ce2.3d634",
         "type": "python3-function",
         "z": "df305688.9bb948",
-        "name": "Run Routine",
+        "name": "autoupdate checker",
         "func": "\nwith open(\"/home/pi/shared/log/autoupdatestate.log\", \"r\") as file:\n    autoupdate=file.read()\nif autoupdate==\"true\":\n    msg['payload']=\"on\"\n    return msg\n",
         "outputs": 1,
-        "x": 303.01739501953125,
+        "x": 323.01739501953125,
         "y": 817.0104608535767,
         "wires": [
             [
@@ -6268,5 +6270,32 @@
         "x": 1426.7952404022217,
         "y": 309.82992362976074,
         "wires": []
+    },
+    {
+        "id": "edf1402c.a1828",
+        "type": "link out",
+        "z": "df305688.9bb948",
+        "name": "",
+        "links": [
+            "ccedd0d4.f1bcb"
+        ],
+        "x": 555.5729541778564,
+        "y": 861.3437366485596,
+        "wires": []
+    },
+    {
+        "id": "96417bb1.725ca8",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "empty",
+        "func": "msg['payload']=\"\"\nreturn msg\n",
+        "outputs": 1,
+        "x": 424.57291412353516,
+        "y": 862.3437509536743,
+        "wires": [
+            [
+                "edf1402c.a1828"
+            ]
+        ]
     }
 ]
