@@ -485,7 +485,7 @@
         "height": 1
     },
     {
-        "id": "f3fd2c66.71d2d",
+        "id": "e08af680.09d1d8",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "ddd1a14a.d7351",
@@ -494,7 +494,7 @@
         "height": 1
     },
     {
-        "id": "84de6f60.545bf",
+        "id": "1c39f67a.e518aa",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "ddd1a14a.d7351",
@@ -503,7 +503,7 @@
         "height": 1
     },
     {
-        "id": "7acea21c.60e67c",
+        "id": "40df9179.98feb",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "ddd1a14a.d7351",
@@ -512,7 +512,7 @@
         "height": 1
     },
     {
-        "id": "7afaf50a.5993bc",
+        "id": "f87e6549.37d9e8",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "35a0e31e.2cf06c",
@@ -521,7 +521,7 @@
         "height": 1
     },
     {
-        "id": "ec4d91d9.074",
+        "id": "a259b036.4dd72",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "35a0e31e.2cf06c",
@@ -530,7 +530,7 @@
         "height": 1
     },
     {
-        "id": "ad34b077.5a0ad",
+        "id": "aefdebea.052968",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "b9933221.eac94",
@@ -5967,5 +5967,21 @@
             [],
             []
         ]
+    },
+    {
+        "id": "1b35a28c.50df3d",
+        "type": "ui_text",
+        "z": "6fff9eb6.3efc2",
+        "group": "ddd1a14a.d7351",
+        "order": 13,
+        "width": "6",
+        "height": "6",
+        "name": "",
+        "label": "Let me know, when you can see this :) - posted on 17.11. at 12.33",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1174.0078125,
+        "y": 167.62109375,
+        "wires": []
     }
 ]
