@@ -2100,24 +2100,6 @@
         ]
     },
     {
-        "id": "f27184cf.869ed8",
-        "type": "file in",
-        "z": "6fff9eb6.3efc2",
-        "name": "",
-        "filename": "/home/pi/shared/log/ssh.log",
-        "format": "lines",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 326.9631004333496,
-        "y": 288.01006603240967,
-        "wires": [
-            [
-                "c46002a5.5dd54"
-            ]
-        ]
-    },
-    {
         "id": "c46002a5.5dd54",
         "type": "ui_switch",
         "z": "6fff9eb6.3efc2",
@@ -2128,7 +2110,7 @@
         "order": 2,
         "width": 6,
         "height": 1,
-        "passthru": false,
+        "passthru": true,
         "decouple": "false",
         "topic": "",
         "style": "",
@@ -2222,9 +2204,9 @@
         "y": 288.01006603240967,
         "wires": [
             [
-                "f27184cf.869ed8",
-                "8f5916a0.387ba8",
-                "547cfb38.d723d4"
+                "547cfb38.d723d4",
+                "69ec4569.690bbc",
+                "7cd43f24.495df"
             ]
         ]
     },
@@ -2242,24 +2224,6 @@
         "y": 448.13168239593506,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "8f5916a0.387ba8",
-        "type": "file in",
-        "z": "6fff9eb6.3efc2",
-        "name": "",
-        "filename": "/home/pi/shared/log/samba.log",
-        "format": "lines",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 328.96308517456055,
-        "y": 448.131573677063,
-        "wires": [
-            [
-                "afc70835.da4208"
-            ]
         ]
     },
     {
@@ -2460,7 +2424,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740.9631004333496,
+        "x": 741.9631004333496,
         "y": 596.0100660324097,
         "wires": [
             []
@@ -6147,28 +6111,10 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 933.0000228881836,
-        "y": 725.0104999542236,
+        "x": 801.9999542236328,
+        "y": 725.0105686187744,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "eafbbd12.261f1",
-        "type": "file in",
-        "z": "df305688.9bb948",
-        "name": "",
-        "filename": "/home/pi/shared/log/autoupdatestate.log",
-        "format": "lines",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 323.00001525878906,
-        "y": 725.010458946228,
-        "wires": [
-            [
-                "af48b40b.ca6fa8"
-            ]
         ]
     },
     {
@@ -6182,7 +6128,7 @@
         "order": 2,
         "width": 6,
         "height": 1,
-        "passthru": false,
+        "passthru": true,
         "decouple": "false",
         "topic": "",
         "style": "",
@@ -6194,8 +6140,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 618,
-        "y": 725.0104370117188,
+        "x": 504.00001525878906,
+        "y": 725.0104999542236,
         "wires": [
             [
                 "400f806d.d842b"
@@ -6218,7 +6164,7 @@
         "y": 725.010458946228,
         "wires": [
             [
-                "eafbbd12.261f1"
+                "2c8c0ab4.6bebf6"
             ]
         ]
     },
@@ -6295,6 +6241,67 @@
         "wires": [
             [
                 "edf1402c.a1828"
+            ]
+        ]
+    },
+    {
+        "id": "2c8c0ab4.6bebf6",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "autoupdate checker",
+        "func": "\nwith open(\"/home/pi/shared/log/autoupdatestate.log\", \"r\") as file:\n    autoupdate=file.read()\nmsg['payload']=False\nif autoupdate==\"true\":\n    msg['payload']=True\nreturn msg",
+        "outputs": 1,
+        "x": 262.0173645019531,
+        "y": 725.2326793670654,
+        "wires": [
+            [
+                "af48b40b.ca6fa8"
+            ]
+        ]
+    },
+    {
+        "id": "69ec4569.690bbc",
+        "type": "python3-function",
+        "z": "6fff9eb6.3efc2",
+        "name": "check ssh",
+        "func": "\nwith open(\"/home/pi/shared/log/ssh.log\", \"r\") as file:\n    state=file.read()\nmsg['payload']=False\nif state==\"true\":\n    msg['payload']=True\nreturn msg",
+        "outputs": 1,
+        "x": 259.01737213134766,
+        "y": 287.01040267944336,
+        "wires": [
+            [
+                "c46002a5.5dd54"
+            ]
+        ]
+    },
+    {
+        "id": "4fa693d9.d0e41c",
+        "type": "file in",
+        "z": "6fff9eb6.3efc2",
+        "name": "",
+        "filename": "/home/pi/shared/log/samba.log",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 331.0173645019531,
+        "y": 506.0104064941406,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cd43f24.495df",
+        "type": "python3-function",
+        "z": "6fff9eb6.3efc2",
+        "name": "check samba",
+        "func": "\nwith open(\"/home/pi/shared/log/samba.log\", \"r\") as file:\n    state=file.read()\nmsg['payload']=False\nif state==\"true\":\n    msg['payload']=True\nreturn msg",
+        "outputs": 1,
+        "x": 265.0173645019531,
+        "y": 448.0104064941406,
+        "wires": [
+            [
+                "afc70835.da4208"
             ]
         ]
     }
