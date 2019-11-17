@@ -1,9 +1,11 @@
-2019-11-17 18.34 ERROR
-  - Program always shows new updates
-  available
+2019-11-17 21.24 ERROR
+  - fixed "always new update msg"
 
 2019-11-17 18.30 First Change      :)
-  - mod changelog
+  !!! on the first restart after this
+  update, putty will be disabled once!!!
+  - fixed ssh/samba, which did not 
+  store the used choice before.
   - fixed auto-update switch
   - added user manual
   - added welcome page (start)
