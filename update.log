@@ -1,5 +1,7 @@
-2019-11-17 21.24 ERROR
-  - fixed "always new update msg"
+2019-11-17 21.26 
+  - "new updates" always on fixed
+  - might restart the RPi twice after
+  update
 
 2019-11-17 18.30 First Change      :)
   !!! on the first restart after this
