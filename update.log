@@ -1,5 +1,5 @@
 2019-11-17 17.20 First Change      :)
   - added changelog
   - added user manual
-  - begun welcome page
-  
+  - started to build welcome page
+  - added /shared/ui/data/ directory
