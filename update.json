@@ -6304,5 +6304,19 @@
                 "afc70835.da4208"
             ]
         ]
+    },
+    {
+        "id": "e62a1c13.ff778",
+        "type": "function",
+        "z": "8d5a7804.52acf8",
+        "name": "SET VERSION",
+        "func": "msg.payload=\" 2019-11-17\"\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 386.0173645019531,
+        "y": 432.0104064941406,
+        "wires": [
+            []
+        ]
     }
 ]
