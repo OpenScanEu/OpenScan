@@ -5498,7 +5498,7 @@
         "label": "Hier wird es bald schöner und übersichtlicher. Ich hoffe, dass ich jetzt soweit alle (halbwegs) sinnvollen Funktionen grob irgendwo im Interface habe. Wenn nicht lasst es mich gern wissen. Als nächstes steht dann aufräumen und Übersichtlichkeit an. Danach noch ein wenig dokumentieren und dann ist's schon fast fertig ;)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1110.398452758789,
+        "x": 1111.398452758789,
         "y": 75.2812728881836,
         "wires": []
     },
@@ -5520,7 +5520,7 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 259.3828582763672,
+        "x": 260.3828582763672,
         "y": 122.46094989776611,
         "wires": [
             []
@@ -5538,7 +5538,7 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-right",
-        "x": 260.0195541381836,
+        "x": 261.0195541381836,
         "y": 221.00391578674316,
         "wires": []
     },
@@ -5551,7 +5551,7 @@
             "c986d5f5.bba4f8",
             "edf1402c.a1828"
         ],
-        "x": 166.39066791534424,
+        "x": 167.39066791534424,
         "y": 220.88675022125244,
         "wires": [
             [
@@ -5715,7 +5715,7 @@
         "wires": [
             [
                 "1a32f672.50fafa",
-                "57daec33.de64a4"
+                "8bced46.98c8a28"
             ]
         ]
     },
@@ -6222,22 +6222,6 @@
         ]
     },
     {
-        "id": "57daec33.de64a4",
-        "type": "function",
-        "z": "df305688.9bb948",
-        "name": "initial. exec",
-        "func": "msg.payload =\"sudo \\cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json && sudo rm -rf -d /home/pi/.node-red/flows_raspberrypi_downloaded.json && sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470.01737213134766,
-        "y": 645.1214952468872,
-        "wires": [
-            [
-                "a09018c8.381778"
-            ]
-        ]
-    },
-    {
         "id": "a09018c8.381778",
         "type": "exec",
         "z": "df305688.9bb948",
@@ -6412,47 +6396,13 @@
         "name": "initial. exec P3",
         "func": "with open(\"/home/pi/shared/ui/data/update.log\", \"r\") as file:\n    version=str(file.read())[:16]\nmsg['payload']=version\n\nwith open(\"/home/pi/shared/log/currentversion.log\", \"w\") as file:\n    file.write(version)\nmsg['payload']=\"sudo \\cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json && sudo rm -rf -d /home/pi/.node-red/flows_raspberrypi_downloaded.json && sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json\"\n\nreturn msg",
         "outputs": 1,
-        "x": 548.0242538452148,
-        "y": 532.1355400085449,
+        "x": 459.0242919921875,
+        "y": 646.1355686187744,
         "wires": [
             [
-                "ad5b30c3.a9491"
+                "a09018c8.381778"
             ]
         ]
-    },
-    {
-        "id": "ab154b97.e908c8",
-        "type": "inject",
-        "z": "df305688.9bb948",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 355.5764389038086,
-        "y": 531.9653797149658,
-        "wires": [
-            [
-                "8bced46.98c8a28"
-            ]
-        ]
-    },
-    {
-        "id": "ad5b30c3.a9491",
-        "type": "debug",
-        "z": "df305688.9bb948",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 721.0174102783203,
-        "y": 530.9479141235352,
-        "wires": []
     },
     {
         "id": "dd37009d.ec59b",
