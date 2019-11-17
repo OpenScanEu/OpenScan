@@ -1,5 +1,12 @@
 [
     {
+        "id": "8d5a7804.52acf8",
+        "type": "tab",
+        "label": "Start",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "4d24a982.7bf068",
         "type": "tab",
         "label": "RPi Cam",
@@ -24,6 +31,13 @@
         "id": "6fff9eb6.3efc2",
         "type": "tab",
         "label": "System",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "df305688.9bb948",
+        "type": "tab",
+        "label": "Update",
         "disabled": false,
         "info": ""
     },
@@ -105,10 +119,10 @@
             }
         },
         "site": {
-            "name": "OpenScan Pi - 2019-11-16",
+            "name": "OpenScan Pi",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "true",
+            "lockMenu": "false",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
@@ -231,9 +245,9 @@
         "z": "",
         "name": "Smartphone",
         "icon": "dashboard",
-        "order": 3,
+        "order": 4,
         "disabled": true,
-        "hidden": true
+        "hidden": false
     },
     {
         "id": "bed472d9.58f62",
@@ -241,7 +255,7 @@
         "z": "",
         "name": "External Camera",
         "icon": "dashboard",
-        "order": 4,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -249,7 +263,7 @@
         "id": "f4e697fc.ee1608",
         "type": "ui_tab",
         "z": "",
-        "name": "System",
+        "name": "Settings",
         "icon": "dashboard",
         "order": 5,
         "disabled": false,
@@ -485,7 +499,49 @@
         "height": 1
     },
     {
-        "id": "e08af680.09d1d8",
+        "id": "8abef8eb.32fed8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Start",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f7451b10.d6c048",
+        "type": "ui_group",
+        "z": "",
+        "name": "Start",
+        "tab": "8abef8eb.32fed8",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d25e08b4.5b27e8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Update & Info",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ddbd496e.93a288",
+        "type": "ui_group",
+        "z": "",
+        "name": "Manage Updates",
+        "tab": "d25e08b4.5b27e8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "42638d7.8e22174",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "ddd1a14a.d7351",
@@ -494,7 +550,7 @@
         "height": 1
     },
     {
-        "id": "1c39f67a.e518aa",
+        "id": "18543834.7679b8",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "ddd1a14a.d7351",
@@ -503,7 +559,7 @@
         "height": 1
     },
     {
-        "id": "40df9179.98feb",
+        "id": "d9b53d8b.b4b16",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "ddd1a14a.d7351",
@@ -512,7 +568,7 @@
         "height": 1
     },
     {
-        "id": "f87e6549.37d9e8",
+        "id": "64e52a0.3fc2ad8",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "35a0e31e.2cf06c",
@@ -521,7 +577,7 @@
         "height": 1
     },
     {
-        "id": "a259b036.4dd72",
+        "id": "2e32db2c.754964",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "35a0e31e.2cf06c",
@@ -530,7 +586,7 @@
         "height": 1
     },
     {
-        "id": "aefdebea.052968",
+        "id": "2d79d00a.dd214",
         "type": "ui_spacer",
         "name": "spacer",
         "group": "b9933221.eac94",
@@ -5425,7 +5481,8 @@
         "name": "reboot",
         "links": [
             "ac9852eb.d953f",
-            "ed6f5b97.ee2618"
+            "ed6f5b97.ee2618",
+            "bbcfb7fb.1b0768"
         ],
         "x": 33.01562309265137,
         "y": 36.953125,
@@ -5437,9 +5494,133 @@
         ]
     },
     {
-        "id": "4425591d.015bb8",
+        "id": "732c5726.b4b898",
+        "type": "ui_text",
+        "z": "8d5a7804.52acf8",
+        "group": "f7451b10.d6c048",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Ich räume gerade das User Interface etwas auf :)",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 650.3984298706055,
+        "y": 237.28126335144043,
+        "wires": []
+    },
+    {
+        "id": "c53e3165.3573",
+        "type": "ui_button",
+        "z": "8d5a7804.52acf8",
+        "name": "",
+        "group": "f7451b10.d6c048",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "passthru": false,
+        "label": "Image - Placeholder",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 579.3828353881836,
+        "y": 283.46094036102295,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3dc26ff.c86408",
+        "type": "ui_text",
+        "z": "8d5a7804.52acf8",
+        "group": "f7451b10.d6c048",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Base version:",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "x": 608.3828125,
+        "y": 336.28125,
+        "wires": []
+    },
+    {
+        "id": "3edbc159.8466be",
+        "type": "inject",
+        "z": "8d5a7804.52acf8",
+        "name": "",
+        "topic": "",
+        "payload": "Started!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 216.01953887939453,
+        "y": 337.00392723083496,
+        "wires": [
+            [
+                "2fc53b16.e5cc44"
+            ]
+        ]
+    },
+    {
+        "id": "2fc53b16.e5cc44",
+        "type": "function",
+        "z": "8d5a7804.52acf8",
+        "name": "SET VERSION",
+        "func": "msg.payload=\" 2019-11-17\"\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400.01953125,
+        "y": 336.0039281845093,
+        "wires": [
+            [
+                "f3dc26ff.c86408"
+            ]
+        ]
+    },
+    {
+        "id": "a0aa92dd.f911c",
+        "type": "ui_text",
+        "z": "8d5a7804.52acf8",
+        "group": "f7451b10.d6c048",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "x": 580.01953125,
+        "y": 382.00390625,
+        "wires": []
+    },
+    {
+        "id": "ccedd0d4.f1bcb",
+        "type": "link in",
+        "z": "8d5a7804.52acf8",
+        "name": "New Update Note",
+        "links": [
+            "c986d5f5.bba4f8"
+        ],
+        "x": 486.39064502716064,
+        "y": 381.8867406845093,
+        "wires": [
+            [
+                "a0aa92dd.f911c"
+            ]
+        ]
+    },
+    {
+        "id": "41bec0aa.7253a",
         "type": "exec",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "command": "sdiff -s /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi_downloaded.json",
         "addpay": false,
         "append": "",
@@ -5447,39 +5628,39 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 621.0104064941406,
-        "y": 2069.00390625,
+        "x": 636.0104064941406,
+        "y": 281.1194076538086,
         "wires": [
             [
-                "e0c3b2b9.52e"
+                "bededa07.706588"
             ],
             [],
             [
-                "98e7b0d5.5ed4e"
+                "8af0f2a7.d3c95"
             ]
         ]
     },
     {
-        "id": "e0c3b2b9.52e",
+        "id": "bededa07.706588",
         "type": "function",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "func": "msg.payload =\"new updates available\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1105.0103607177734,
-        "y": 2056.5871810913086,
+        "x": 1120.0103607177734,
+        "y": 268.7026824951172,
         "wires": [
             [
-                "f00354f5.860508"
+                "4f002145.94787"
             ]
         ]
     },
     {
-        "id": "125fa56e.5fd95b",
+        "id": "67811932.5b76e8",
         "type": "ui_text",
-        "z": "6fff9eb6.3efc2",
-        "group": "ddd1a14a.d7351",
+        "z": "df305688.9bb948",
+        "group": "ddbd496e.93a288",
         "order": 9,
         "width": 0,
         "height": 0,
@@ -5487,31 +5668,31 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 116.54400825500488,
-        "y": 1827.9102020263672,
+        "x": 131.54400825500488,
+        "y": 40.02570343017578,
         "wires": []
     },
     {
-        "id": "98e7b0d5.5ed4e",
+        "id": "8af0f2a7.d3c95",
         "type": "function",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "func": "msg.payload =\"your system is up to date\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1105.0000114440918,
-        "y": 2093.6879272460938,
+        "x": 1120.0000114440918,
+        "y": 305.80342864990234,
         "wires": [
             [
-                "905b7a58.a15dc8",
-                "f36b9e60.64518"
+                "29352168.95ba2e",
+                "f1bee617.729c58"
             ]
         ]
     },
     {
-        "id": "f00354f5.860508",
+        "id": "4f002145.94787",
         "type": "delay",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "pauseType": "delay",
         "timeout": "10",
@@ -5523,19 +5704,20 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1275.996597290039,
-        "y": 2057.5941619873047,
+        "x": 1290.996597290039,
+        "y": 269.7096633911133,
         "wires": [
             [
-                "4f41da90.68ae84",
-                "f36b9e60.64518"
+                "babe2a6.c6c27d8",
+                "f1bee617.729c58",
+                "c986d5f5.bba4f8"
             ]
         ]
     },
     {
-        "id": "d317bb78.13be78",
+        "id": "e6c15646.7d0d38",
         "type": "inject",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "topic": "",
         "payload": "Started!",
@@ -5544,34 +5726,34 @@
         "crontab": "",
         "once": true,
         "onceDelay": "",
-        "x": 65,
-        "y": 1882.687928199768,
+        "x": 82,
+        "y": 97.80342960357666,
         "wires": [
             [
-                "984ca977.1861e8"
+                "d773e4fd.8e1a58"
             ]
         ]
     },
     {
-        "id": "984ca977.1861e8",
+        "id": "d773e4fd.8e1a58",
         "type": "function",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "func": "msg.payload =\"need to check for updates:\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 275.9999771118164,
-        "y": 1885.6880702972412,
+        "x": 290.9999771118164,
+        "y": 97.8035717010498,
         "wires": [
             [
-                "531b5b18.b00d64"
+                "d33997e3.7b5128"
             ]
         ]
     },
     {
-        "id": "6bc73c41.cc5054",
+        "id": "90106343.b581c",
         "type": "exec",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "command": "wget -O /home/pi/.node-red/flows_raspberrypi_downloaded.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update.json",
         "addpay": false,
         "append": "",
@@ -5579,22 +5761,22 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 1007.0277709960938,
-        "y": 2000.9936141967773,
+        "x": 1022.0277709960938,
+        "y": 213.10911560058594,
         "wires": [
             [],
             [],
             [
-                "4425591d.015bb8"
+                "41bec0aa.7253a"
             ]
         ]
     },
     {
-        "id": "1281adc3.0200a2",
+        "id": "169ac8d.12a7937",
         "type": "ui_button",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
-        "group": "ddd1a14a.d7351",
+        "group": "ddbd496e.93a288",
         "order": 10,
         "width": 0,
         "height": 0,
@@ -5607,21 +5789,21 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 95,
-        "y": 1937.6879205703735,
+        "x": 97,
+        "y": 148.80342864990234,
         "wires": [
             [
-                "2864afd9.f9086",
-                "6bc73c41.cc5054"
+                "d44739ce.20aa08",
+                "90106343.b581c"
             ]
         ]
     },
     {
-        "id": "dcf9db4b.a1f2f8",
+        "id": "40c2efa4.360eb",
         "type": "ui_button",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
-        "group": "ddd1a14a.d7351",
+        "group": "ddbd496e.93a288",
         "order": 11,
         "width": 0,
         "height": 0,
@@ -5634,18 +5816,18 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 97.0173568725586,
-        "y": 2266.687906265259,
+        "x": 112.0173568725586,
+        "y": 478.8034076690674,
         "wires": [
             [
-                "96114630.85bd68"
+                "1b8f3ce5.e37783"
             ]
         ]
     },
     {
-        "id": "52e53d39.e77434",
+        "id": "293264d2.08dc0c",
         "type": "exec",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json",
         "addpay": false,
         "append": "",
@@ -5653,123 +5835,123 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 762.0173263549805,
-        "y": 2266.687906265259,
+        "x": 777.0173263549805,
+        "y": 478.8034076690674,
         "wires": [
             [],
             [],
             [
-                "24afb22c.0fb70e",
-                "d18392b2.ce5e2"
+                "abc3b6e5.86b288",
+                "5c0c5c34.c4bc94"
             ]
         ]
     },
     {
-        "id": "96114630.85bd68",
+        "id": "1b8f3ce5.e37783",
         "type": "function",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "func": "if(global.get(\"updateavailability\")==\"new updates available\"){\n    msg.payload =\"updating\"\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 275.0173683166504,
-        "y": 2266.687973022461,
+        "x": 290.0173683166504,
+        "y": 478.80347442626953,
         "wires": [
             [
-                "19b5f374.71161d",
-                "52e53d39.e77434"
+                "1a32f672.50fafa",
+                "293264d2.08dc0c"
             ]
         ]
     },
     {
-        "id": "2864afd9.f9086",
+        "id": "d44739ce.20aa08",
         "type": "function",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "func": "msg.payload =\"checking for updates\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 274.017333984375,
-        "y": 1937.6878786087036,
+        "x": 289.017333984375,
+        "y": 149.8033800125122,
         "wires": [
             [
-                "fb98048b.dfcc98"
+                "c803000f.cec2e"
             ]
         ]
     },
     {
-        "id": "fb98048b.dfcc98",
+        "id": "c803000f.cec2e",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
-            "f3022242.0abf8"
+            "9141f91a.7a5b98"
         ],
-        "x": 378.01955223083496,
-        "y": 1938.8063440322876,
+        "x": 393.01955223083496,
+        "y": 150.9218454360962,
         "wires": []
     },
     {
-        "id": "f3022242.0abf8",
+        "id": "9141f91a.7a5b98",
         "type": "link in",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "update",
         "links": [
-            "fb98048b.dfcc98",
-            "4f41da90.68ae84",
-            "905b7a58.a15dc8",
-            "531b5b18.b00d64",
-            "19b5f374.71161d",
-            "dc5ac27e.91a68"
+            "c803000f.cec2e",
+            "babe2a6.c6c27d8",
+            "29352168.95ba2e",
+            "d33997e3.7b5128",
+            "1a32f672.50fafa",
+            "629556b9.c99758"
         ],
-        "x": 20,
-        "y": 1827.8844985961914,
+        "x": 35,
+        "y": 40,
         "wires": [
             [
-                "125fa56e.5fd95b"
+                "67811932.5b76e8"
             ]
         ]
     },
     {
-        "id": "4f41da90.68ae84",
+        "id": "babe2a6.c6c27d8",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
-            "f3022242.0abf8"
+            "9141f91a.7a5b98"
         ],
-        "x": 1406.01953125,
-        "y": 2057.68137550354,
+        "x": 1426.01953125,
+        "y": 269.79687690734863,
         "wires": []
     },
     {
-        "id": "905b7a58.a15dc8",
+        "id": "29352168.95ba2e",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
-            "f3022242.0abf8"
+            "9141f91a.7a5b98"
         ],
-        "x": 1200.019543647766,
-        "y": 2130.6813821792603,
+        "x": 1215.019543647766,
+        "y": 342.79688358306885,
         "wires": []
     },
     {
-        "id": "531b5b18.b00d64",
+        "id": "d33997e3.7b5128",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
-            "f3022242.0abf8"
+            "9141f91a.7a5b98"
         ],
-        "x": 363.002197265625,
-        "y": 1883.6814041137695,
+        "x": 378.002197265625,
+        "y": 95.79690551757812,
         "wires": []
     },
     {
-        "id": "f36b9e60.64518",
+        "id": "f1bee617.729c58",
         "type": "change",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "rules": [
             {
@@ -5785,68 +5967,68 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1316.0195121765137,
-        "y": 2093.681365966797,
+        "x": 1542.019702911377,
+        "y": 346.7968921661377,
         "wires": [
             []
         ]
     },
     {
-        "id": "19b5f374.71161d",
+        "id": "1a32f672.50fafa",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
-            "f3022242.0abf8"
+            "9141f91a.7a5b98"
         ],
-        "x": 379.01953125,
-        "y": 2217.68137550354,
+        "x": 394.01953125,
+        "y": 429.79687690734863,
         "wires": []
     },
     {
-        "id": "fad84020.11d87",
+        "id": "2431a9a0.5766c6",
         "type": "function",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "func": "msg.payload =\"rebooting\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1382.0195274353027,
-        "y": 2354.681389808655,
+        "x": 1397.0195274353027,
+        "y": 566.7968912124634,
         "wires": [
             [
-                "dc5ac27e.91a68"
+                "629556b9.c99758"
             ]
         ]
     },
     {
-        "id": "dc5ac27e.91a68",
+        "id": "629556b9.c99758",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
-            "f3022242.0abf8"
+            "9141f91a.7a5b98"
         ],
-        "x": 1474.0218172073364,
-        "y": 2354.6747665405273,
+        "x": 1489.0218172073364,
+        "y": 566.7902679443359,
         "wires": []
     },
     {
-        "id": "ed6f5b97.ee2618",
+        "id": "bbcfb7fb.1b0768",
         "type": "link out",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "links": [
             "543b8cc6.11f404"
         ],
-        "x": 1348.007779121399,
-        "y": 2390.5447006225586,
+        "x": 1363.007779121399,
+        "y": 602.6602020263672,
         "wires": []
     },
     {
-        "id": "24afb22c.0fb70e",
+        "id": "abc3b6e5.86b288",
         "type": "exec",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi.json",
         "addpay": false,
         "append": "",
@@ -5854,20 +6036,20 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 719.01953125,
-        "y": 2340.6814041137695,
+        "x": 734.01953125,
+        "y": 552.7969055175781,
         "wires": [
             [],
             [],
             [
-                "1f9ad7ad.951b18"
+                "dc562398.d7ff3"
             ]
         ]
     },
     {
-        "id": "1f9ad7ad.951b18",
+        "id": "dc562398.d7ff3",
         "type": "delay",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -5879,21 +6061,21 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1205.015609741211,
-        "y": 2353.5602645874023,
+        "x": 1220.015609741211,
+        "y": 565.6757659912109,
         "wires": [
             [
-                "ed6f5b97.ee2618",
-                "fad84020.11d87"
+                "bbcfb7fb.1b0768",
+                "2431a9a0.5766c6"
             ]
         ]
     },
     {
-        "id": "dac80dc4.2023a",
+        "id": "c1cd5b6c.f01e78",
         "type": "ui_button",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "name": "",
-        "group": "ddd1a14a.d7351",
+        "group": "ddbd496e.93a288",
         "order": 12,
         "width": 0,
         "height": 0,
@@ -5906,18 +6088,18 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 107.01953125,
-        "y": 2406.68137550354,
+        "x": 122.01953125,
+        "y": 618.7968769073486,
         "wires": [
             [
-                "e532ea40.db7278"
+                "35a3c051.3bc8f"
             ]
         ]
     },
     {
-        "id": "e532ea40.db7278",
+        "id": "35a3c051.3bc8f",
         "type": "exec",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json",
         "addpay": false,
         "append": "",
@@ -5925,34 +6107,20 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 717.01953125,
-        "y": 2407.68137550354,
+        "x": 732.01953125,
+        "y": 619.7968769073486,
         "wires": [
             [
-                "1f9ad7ad.951b18"
+                "dc562398.d7ff3"
             ],
             [],
             []
         ]
     },
     {
-        "id": "ed8953a4.f9ce7",
-        "type": "function",
-        "z": "6fff9eb6.3efc2",
-        "name": "",
-        "func": "msg.payload =\"no update available\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1036.01953125,
-        "y": 2167.68137550354,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d18392b2.ce5e2",
+        "id": "5c0c5c34.c4bc94",
         "type": "exec",
-        "z": "6fff9eb6.3efc2",
+        "z": "df305688.9bb948",
         "command": "sudo rm -rf -d /home/pi/.node-red/flows_raspberrypi_downloaded.json",
         "addpay": true,
         "append": "",
@@ -5960,8 +6128,8 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 1451.0195617675781,
-        "y": 2266.0039596557617,
+        "x": 1466.0195617675781,
+        "y": 478.1194610595703,
         "wires": [
             [],
             [],
@@ -5969,19 +6137,136 @@
         ]
     },
     {
-        "id": "1b35a28c.50df3d",
-        "type": "ui_text",
-        "z": "6fff9eb6.3efc2",
-        "group": "ddd1a14a.d7351",
-        "order": 13,
-        "width": "6",
-        "height": "6",
+        "id": "400f806d.d842b",
+        "type": "file",
+        "z": "df305688.9bb948",
         "name": "",
-        "label": "Let me know, when you can see this :) - posted on 17.11. at 12.33",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1174.0078125,
-        "y": 167.62109375,
+        "filename": "/home/pi/shared/log/autoupdatestate.log",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 933.0000228881836,
+        "y": 725.0104999542236,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eafbbd12.261f1",
+        "type": "file in",
+        "z": "df305688.9bb948",
+        "name": "",
+        "filename": "/home/pi/shared/log/autoupdatestate.log",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 323.00001525878906,
+        "y": 725.010458946228,
+        "wires": [
+            [
+                "af48b40b.ca6fa8"
+            ]
+        ]
+    },
+    {
+        "id": "af48b40b.ca6fa8",
+        "type": "ui_switch",
+        "z": "df305688.9bb948",
+        "name": "",
+        "label": "Auto-check for updates",
+        "tooltip": "",
+        "group": "ddbd496e.93a288",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 618,
+        "y": 725.0104370117188,
+        "wires": [
+            [
+                "400f806d.d842b"
+            ]
+        ]
+    },
+    {
+        "id": "38d256fb.8a27ca",
+        "type": "inject",
+        "z": "df305688.9bb948",
+        "name": "",
+        "topic": "",
+        "payload": "Started!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "x": 70,
+        "y": 725.010458946228,
+        "wires": [
+            [
+                "eafbbd12.261f1"
+            ]
+        ]
+    },
+    {
+        "id": "b7822c15.eef3",
+        "type": "inject",
+        "z": "df305688.9bb948",
+        "name": "",
+        "topic": "",
+        "payload": "Started!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "x": 102.0173568725586,
+        "y": 817.0104484558105,
+        "wires": [
+            [
+                "bf685ce2.3d634"
+            ]
+        ]
+    },
+    {
+        "id": "bf685ce2.3d634",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "Run Routine",
+        "func": "\nwith open(\"/home/pi/shared/log/autoupdatestate.log\", \"r\") as file:\n    autoupdate=file.read()\nif autoupdate==\"true\":\n    msg['payload']=\"on\"\n    return msg\n",
+        "outputs": 1,
+        "x": 303.01739501953125,
+        "y": 817.0104608535767,
+        "wires": [
+            [
+                "d44739ce.20aa08",
+                "90106343.b581c"
+            ]
+        ]
+    },
+    {
+        "id": "c986d5f5.bba4f8",
+        "type": "link out",
+        "z": "df305688.9bb948",
+        "name": "",
+        "links": [
+            "ccedd0d4.f1bcb"
+        ],
+        "x": 1426.7952404022217,
+        "y": 309.82992362976074,
         "wires": []
     }
 ]
