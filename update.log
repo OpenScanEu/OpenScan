@@ -1,6 +1,10 @@
 2019-11-17 18.30 First Change      :)
   - mod changelog
+  - fixed auto-update switch
   - added user manual
-  - started to build welcome page
-  - added /shared/ui/data/ directory
+  - added welcome page (start)
+  - added directory /shared/ui/data/ 
+  - rename System Tab --> Settings
+  - click to show side menu instead 
+    of always show side menu
 2019-11-17 17.20 created changelog
