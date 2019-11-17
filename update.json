@@ -30,7 +30,7 @@
     {
         "id": "6fff9eb6.3efc2",
         "type": "tab",
-        "label": "System",
+        "label": "Settings",
         "disabled": false,
         "info": ""
     },
@@ -516,7 +516,7 @@
         "tab": "8abef8eb.32fed8",
         "order": 1,
         "disp": false,
-        "width": "6",
+        "width": 8,
         "collapse": false
     },
     {
@@ -592,6 +592,35 @@
         "group": "b9933221.eac94",
         "order": 2,
         "width": 7,
+        "height": 1
+    },
+    {
+        "id": "3ce32450.e0cffc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Changelog",
+        "tab": "d25e08b4.5b27e8",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "83c0a87a.9ee028",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ddbd496e.93a288",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e4374eba.293fc",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ddbd496e.93a288",
+        "order": 7,
+        "width": 6,
         "height": 1
     },
     {
@@ -2249,8 +2278,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 564.9630699157715,
-        "y": 448.13164806365967,
+        "x": 559.9630737304688,
+        "y": 447.13165283203125,
         "wires": [
             [
                 "3a5b4087.2cea8",
@@ -5463,14 +5492,14 @@
         "z": "8d5a7804.52acf8",
         "group": "f7451b10.d6c048",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 8,
+        "height": 4,
         "name": "",
-        "label": "Ich räume gerade das User Interface etwas auf :)",
+        "label": "Hier wird es bald schöner und übersichtlicher. Ich hoffe, dass ich jetzt soweit alle (halbwegs) sinnvollen Funktionen grob irgendwo im Interface habe. Wenn nicht lasst es mich gern wissen. Als nächstes steht dann aufräumen und Übersichtlichkeit an. Danach noch ein wenig dokumentieren und dann ist's schon fast fertig ;)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 650.3984298706055,
-        "y": 236.28126335144043,
+        "x": 1110.398452758789,
+        "y": 75.2812728881836,
         "wires": []
     },
     {
@@ -5480,8 +5509,8 @@
         "name": "",
         "group": "f7451b10.d6c048",
         "order": 2,
-        "width": 6,
-        "height": 6,
+        "width": 8,
+        "height": 3,
         "passthru": false,
         "label": "Image - Placeholder",
         "tooltip": "",
@@ -5491,62 +5520,10 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 579.3828353881836,
-        "y": 283.46094036102295,
+        "x": 259.3828582763672,
+        "y": 122.46094989776611,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "f3dc26ff.c86408",
-        "type": "ui_text",
-        "z": "8d5a7804.52acf8",
-        "group": "f7451b10.d6c048",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Base version:",
-        "format": "{{msg.payload}}",
-        "layout": "row-right",
-        "x": 608.3828125,
-        "y": 336.28125,
-        "wires": []
-    },
-    {
-        "id": "3edbc159.8466be",
-        "type": "inject",
-        "z": "8d5a7804.52acf8",
-        "name": "",
-        "topic": "",
-        "payload": "Started!",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "x": 216.01953887939453,
-        "y": 337.00392723083496,
-        "wires": [
-            [
-                "2fc53b16.e5cc44"
-            ]
-        ]
-    },
-    {
-        "id": "2fc53b16.e5cc44",
-        "type": "function",
-        "z": "8d5a7804.52acf8",
-        "name": "SET VERSION",
-        "func": "msg.payload=\" 2019-11-17\"\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 400.01953125,
-        "y": 336.0039281845093,
-        "wires": [
-            [
-                "f3dc26ff.c86408"
-            ]
         ]
     },
     {
@@ -5561,8 +5538,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-right",
-        "x": 580.01953125,
-        "y": 382.00390625,
+        "x": 260.0195541381836,
+        "y": 221.00391578674316,
         "wires": []
     },
     {
@@ -5574,8 +5551,8 @@
             "c986d5f5.bba4f8",
             "edf1402c.a1828"
         ],
-        "x": 486.39064502716064,
-        "y": 381.8867406845093,
+        "x": 166.39066791534424,
+        "y": 220.88675022125244,
         "wires": [
             [
                 "a0aa92dd.f911c"
@@ -5583,41 +5560,19 @@
         ]
     },
     {
-        "id": "41bec0aa.7253a",
-        "type": "exec",
-        "z": "df305688.9bb948",
-        "command": "sdiff -s /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi_downloaded.json",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 636.0104064941406,
-        "y": 281.1194076538086,
-        "wires": [
-            [
-                "bededa07.706588"
-            ],
-            [],
-            [
-                "8af0f2a7.d3c95"
-            ]
-        ]
-    },
-    {
         "id": "bededa07.706588",
         "type": "function",
         "z": "df305688.9bb948",
-        "name": "",
+        "name": "msg",
         "func": "msg.payload =\"new updates available\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1120.0103607177734,
-        "y": 268.7026824951172,
+        "x": 833.010368347168,
+        "y": 387.702675819397,
         "wires": [
             [
-                "4f002145.94787"
+                "4f002145.94787",
+                "1a329e97.15b111"
             ]
         ]
     },
@@ -5626,27 +5581,27 @@
         "type": "ui_text",
         "z": "df305688.9bb948",
         "group": "ddbd496e.93a288",
-        "order": 9,
+        "order": 2,
         "width": 0,
         "height": 0,
-        "name": "",
+        "name": "update text",
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 131.54400825500488,
-        "y": 40.02570343017578,
+        "x": 136.54400825500488,
+        "y": 32.02570629119873,
         "wires": []
     },
     {
         "id": "8af0f2a7.d3c95",
         "type": "function",
         "z": "df305688.9bb948",
-        "name": "",
+        "name": "msg",
         "func": "msg.payload =\"your system is up to date\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1120.0000114440918,
-        "y": 305.80342864990234,
+        "x": 833.0000190734863,
+        "y": 424.80342197418213,
         "wires": [
             [
                 "29352168.95ba2e",
@@ -5669,8 +5624,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1290.996597290039,
-        "y": 269.7096633911133,
+        "x": 1002.9966049194336,
+        "y": 387.70965671539307,
         "wires": [
             [
                 "babe2a6.c6c27d8",
@@ -5680,59 +5635,18 @@
         ]
     },
     {
-        "id": "e6c15646.7d0d38",
-        "type": "inject",
-        "z": "df305688.9bb948",
-        "name": "",
-        "topic": "",
-        "payload": "Started!",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "x": 82,
-        "y": 97.80342960357666,
-        "wires": [
-            [
-                "d773e4fd.8e1a58"
-            ]
-        ]
-    },
-    {
         "id": "d773e4fd.8e1a58",
         "type": "function",
         "z": "df305688.9bb948",
-        "name": "",
+        "name": "msg",
         "func": "msg.payload =\"need to check for updates:\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290.9999771118164,
-        "y": 97.8035717010498,
+        "x": 244.9999885559082,
+        "y": 361.8035707473755,
         "wires": [
             [
                 "d33997e3.7b5128"
-            ]
-        ]
-    },
-    {
-        "id": "90106343.b581c",
-        "type": "exec",
-        "z": "df305688.9bb948",
-        "command": "wget -O /home/pi/.node-red/flows_raspberrypi_downloaded.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update.json",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 1022.0277709960938,
-        "y": 213.10911560058594,
-        "wires": [
-            [],
-            [],
-            [
-                "41bec0aa.7253a"
             ]
         ]
     },
@@ -5742,7 +5656,7 @@
         "z": "df305688.9bb948",
         "name": "",
         "group": "ddbd496e.93a288",
-        "order": 10,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -5754,12 +5668,11 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 97,
-        "y": 148.80342864990234,
+        "x": 100.00001525878906,
+        "y": 401.80344676971436,
         "wires": [
             [
-                "d44739ce.20aa08",
-                "90106343.b581c"
+                "d44739ce.20aa08"
             ]
         ]
     },
@@ -5769,7 +5682,7 @@
         "z": "df305688.9bb948",
         "name": "",
         "group": "ddbd496e.93a288",
-        "order": 11,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -5781,8 +5694,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 112.0173568725586,
-        "y": 478.8034076690674,
+        "x": 119.01736450195312,
+        "y": 646.8033971786499,
         "wires": [
             [
                 "1b8f3ce5.e37783"
@@ -5790,41 +5703,19 @@
         ]
     },
     {
-        "id": "293264d2.08dc0c",
-        "type": "exec",
-        "z": "df305688.9bb948",
-        "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 777.0173263549805,
-        "y": 478.8034076690674,
-        "wires": [
-            [],
-            [],
-            [
-                "abc3b6e5.86b288",
-                "5c0c5c34.c4bc94"
-            ]
-        ]
-    },
-    {
         "id": "1b8f3ce5.e37783",
         "type": "function",
         "z": "df305688.9bb948",
-        "name": "",
+        "name": "msg",
         "func": "if(global.get(\"updateavailability\")==\"new updates available\"){\n    msg.payload =\"updating\"\n    return msg;\n}\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 290.0173683166504,
-        "y": 478.80347442626953,
+        "x": 297.0173759460449,
+        "y": 646.803463935852,
         "wires": [
             [
                 "1a32f672.50fafa",
-                "293264d2.08dc0c"
+                "57daec33.de64a4"
             ]
         ]
     },
@@ -5832,29 +5723,18 @@
         "id": "d44739ce.20aa08",
         "type": "function",
         "z": "df305688.9bb948",
-        "name": "",
+        "name": "msg",
         "func": "msg.payload =\"checking for updates\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 289.017333984375,
-        "y": 149.8033800125122,
+        "x": 294.01734924316406,
+        "y": 401.80338191986084,
         "wires": [
             [
-                "c803000f.cec2e"
+                "d33997e3.7b5128",
+                "9582edb9.88539"
             ]
         ]
-    },
-    {
-        "id": "c803000f.cec2e",
-        "type": "link out",
-        "z": "df305688.9bb948",
-        "name": "",
-        "links": [
-            "9141f91a.7a5b98"
-        ],
-        "x": 393.01955223083496,
-        "y": 150.9218454360962,
-        "wires": []
     },
     {
         "id": "9141f91a.7a5b98",
@@ -5867,10 +5747,11 @@
             "29352168.95ba2e",
             "d33997e3.7b5128",
             "1a32f672.50fafa",
-            "629556b9.c99758"
+            "629556b9.c99758",
+            "e4b7a78b.af9278"
         ],
-        "x": 35,
-        "y": 40,
+        "x": 20,
+        "y": 32.00000286102295,
         "wires": [
             [
                 "67811932.5b76e8"
@@ -5885,8 +5766,8 @@
         "links": [
             "9141f91a.7a5b98"
         ],
-        "x": 1426.01953125,
-        "y": 269.79687690734863,
+        "x": 1163.019645690918,
+        "y": 387.7968854904175,
         "wires": []
     },
     {
@@ -5897,8 +5778,8 @@
         "links": [
             "9141f91a.7a5b98"
         ],
-        "x": 1215.019543647766,
-        "y": 342.79688358306885,
+        "x": 928.0195512771606,
+        "y": 461.79687690734863,
         "wires": []
     },
     {
@@ -5909,8 +5790,8 @@
         "links": [
             "9141f91a.7a5b98"
         ],
-        "x": 378.002197265625,
-        "y": 95.79690551757812,
+        "x": 388.0023136138916,
+        "y": 361.7969055175781,
         "wires": []
     },
     {
@@ -5932,8 +5813,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1544.019702911377,
-        "y": 346.7968921661377,
+        "x": 1198.0197525024414,
+        "y": 467.7969045639038,
         "wires": [
             []
         ]
@@ -5946,20 +5827,20 @@
         "links": [
             "9141f91a.7a5b98"
         ],
-        "x": 394.01953125,
-        "y": 429.79687690734863,
+        "x": 401.01953887939453,
+        "y": 597.7968664169312,
         "wires": []
     },
     {
         "id": "2431a9a0.5766c6",
         "type": "function",
         "z": "df305688.9bb948",
-        "name": "",
+        "name": "msg",
         "func": "msg.payload =\"rebooting\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1397.0195274353027,
-        "y": 566.7968912124634,
+        "x": 1051.0195426940918,
+        "y": 656.7969236373901,
         "wires": [
             [
                 "629556b9.c99758"
@@ -5974,8 +5855,8 @@
         "links": [
             "9141f91a.7a5b98"
         ],
-        "x": 1489.0218172073364,
-        "y": 566.7902679443359,
+        "x": 1143.0218324661255,
+        "y": 656.7903003692627,
         "wires": []
     },
     {
@@ -5986,30 +5867,9 @@
         "links": [
             "543b8cc6.11f404"
         ],
-        "x": 1363.007779121399,
-        "y": 602.6602020263672,
+        "x": 1017.007794380188,
+        "y": 692.660234451294,
         "wires": []
-    },
-    {
-        "id": "abc3b6e5.86b288",
-        "type": "exec",
-        "z": "df305688.9bb948",
-        "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi.json",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 734.01953125,
-        "y": 552.7969055175781,
-        "wires": [
-            [],
-            [],
-            [
-                "dc562398.d7ff3"
-            ]
-        ]
     },
     {
         "id": "dc562398.d7ff3",
@@ -6026,8 +5886,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1220.015609741211,
-        "y": 565.6757659912109,
+        "x": 874.015625,
+        "y": 655.6757984161377,
         "wires": [
             [
                 "bbcfb7fb.1b0768",
@@ -6041,11 +5901,11 @@
         "z": "df305688.9bb948",
         "name": "",
         "group": "ddbd496e.93a288",
-        "order": 12,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Reset to last update",
+        "label": "Reinstall last Update",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -6053,8 +5913,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 122.01953125,
-        "y": 618.7968769073486,
+        "x": 125.01953887939453,
+        "y": 743.7969007492065,
         "wires": [
             [
                 "35a3c051.3bc8f"
@@ -6065,38 +5925,19 @@
         "id": "35a3c051.3bc8f",
         "type": "exec",
         "z": "df305688.9bb948",
-        "command": "sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json",
+        "command": "sudo \\cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json",
         "addpay": false,
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 732.01953125,
-        "y": 619.7968769073486,
+        "x": 624.0195465087891,
+        "y": 745.7969017028809,
         "wires": [
             [
                 "dc562398.d7ff3"
             ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "5c0c5c34.c4bc94",
-        "type": "exec",
-        "z": "df305688.9bb948",
-        "command": "sudo rm -rf -d /home/pi/.node-red/flows_raspberrypi_downloaded.json",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 1466.0195617675781,
-        "y": 478.1194610595703,
-        "wires": [
-            [],
             [],
             []
         ]
@@ -6111,8 +5952,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 801.9999542236328,
-        "y": 725.0105686187744,
+        "x": 822.9999694824219,
+        "y": 198.3439130783081,
         "wires": [
             []
         ]
@@ -6125,7 +5966,7 @@
         "label": "Auto-check for updates",
         "tooltip": "",
         "group": "ddbd496e.93a288",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -6140,8 +5981,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 504.00001525878906,
-        "y": 725.0104999542236,
+        "x": 524.0000305175781,
+        "y": 198.34384441375732,
         "wires": [
             [
                 "400f806d.d842b"
@@ -6160,32 +6001,14 @@
         "crontab": "",
         "once": true,
         "onceDelay": "",
-        "x": 70,
-        "y": 725.010458946228,
+        "x": 90.00001525878906,
+        "y": 198.34380340576172,
         "wires": [
             [
-                "2c8c0ab4.6bebf6"
-            ]
-        ]
-    },
-    {
-        "id": "b7822c15.eef3",
-        "type": "inject",
-        "z": "df305688.9bb948",
-        "name": "",
-        "topic": "",
-        "payload": "Started!",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "x": 102.0173568725586,
-        "y": 817.0104484558105,
-        "wires": [
-            [
+                "2c8c0ab4.6bebf6",
                 "bf685ce2.3d634",
-                "96417bb1.725ca8"
+                "96417bb1.725ca8",
+                "d773e4fd.8e1a58"
             ]
         ]
     },
@@ -6196,12 +6019,11 @@
         "name": "autoupdate checker",
         "func": "\nwith open(\"/home/pi/shared/log/autoupdatestate.log\", \"r\") as file:\n    autoupdate=file.read()\nif autoupdate==\"true\":\n    msg['payload']=\"on\"\n    return msg\n",
         "outputs": 1,
-        "x": 323.01739501953125,
-        "y": 817.0104608535767,
+        "x": 280.0174331665039,
+        "y": 244.3438959121704,
         "wires": [
             [
-                "d44739ce.20aa08",
-                "90106343.b581c"
+                "9582edb9.88539"
             ]
         ]
     },
@@ -6213,8 +6035,8 @@
         "links": [
             "ccedd0d4.f1bcb"
         ],
-        "x": 1426.7952404022217,
-        "y": 309.82992362976074,
+        "x": 1163.7953548431396,
+        "y": 427.8299322128296,
         "wires": []
     },
     {
@@ -6225,19 +6047,19 @@
         "links": [
             "ccedd0d4.f1bcb"
         ],
-        "x": 555.5729541778564,
-        "y": 861.3437366485596,
+        "x": 342.57295513153076,
+        "y": 294.67720317840576,
         "wires": []
     },
     {
         "id": "96417bb1.725ca8",
         "type": "python3-function",
         "z": "df305688.9bb948",
-        "name": "empty",
+        "name": "msg",
         "func": "msg['payload']=\"\"\nreturn msg\n",
         "outputs": 1,
-        "x": 424.57291412353516,
-        "y": 862.3437509536743,
+        "x": 242.57290649414062,
+        "y": 294.6772041320801,
         "wires": [
             [
                 "edf1402c.a1828"
@@ -6251,8 +6073,8 @@
         "name": "autoupdate checker",
         "func": "\nwith open(\"/home/pi/shared/log/autoupdatestate.log\", \"r\") as file:\n    autoupdate=file.read()\nmsg['payload']=False\nif autoupdate==\"true\":\n    msg['payload']=True\nreturn msg",
         "outputs": 1,
-        "x": 262.0173645019531,
-        "y": 725.2326793670654,
+        "x": 282.0173797607422,
+        "y": 198.56602382659912,
         "wires": [
             [
                 "af48b40b.ca6fa8"
@@ -6306,17 +6128,481 @@
         ]
     },
     {
-        "id": "e62a1c13.ff778",
+        "id": "a99492a0.5f092",
         "type": "function",
-        "z": "8d5a7804.52acf8",
-        "name": "SET VERSION",
-        "func": "msg.payload=\" 2019-11-17\"\nreturn msg",
+        "z": "df305688.9bb948",
+        "name": "initial. exec",
+        "func": "msg.payload =\"\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 386.0173645019531,
-        "y": 432.0104064941406,
+        "x": 292.0173797607422,
+        "y": 1248.0104351043701,
+        "wires": [
+            [
+                "7c7dd85d.96a788"
+            ]
+        ]
+    },
+    {
+        "id": "7c7dd85d.96a788",
+        "type": "exec",
+        "z": "df305688.9bb948",
+        "command": "tester",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 424.0208969116211,
+        "y": 1248.3229179382324,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9582edb9.88539",
+        "type": "function",
+        "z": "df305688.9bb948",
+        "name": "initial. exec",
+        "func": "msg.payload =\"sudo wget -O /home/pi/shared/ui/data/update.log https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update.log && sudo wget -O /home/pi/.node-red/flows_raspberrypi_downloaded.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update.json &&sudo sdiff -s /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi_downloaded.json\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 503.0174102783203,
+        "y": 401.0104875564575,
+        "wires": [
+            [
+                "1e9dcf52.3b7aa1"
+            ]
+        ]
+    },
+    {
+        "id": "1e9dcf52.3b7aa1",
+        "type": "exec",
+        "z": "df305688.9bb948",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 676.0173072814941,
+        "y": 401.0105028152466,
+        "wires": [
+            [
+                "bededa07.706588"
+            ],
+            [],
+            [
+                "8af0f2a7.d3c95"
+            ]
+        ]
+    },
+    {
+        "id": "dae71268.f8f0b",
+        "type": "inject",
+        "z": "df305688.9bb948",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 122.01388931274414,
+        "y": 1248.9653186798096,
+        "wires": [
+            [
+                "a99492a0.5f092"
+            ]
+        ]
+    },
+    {
+        "id": "57daec33.de64a4",
+        "type": "function",
+        "z": "df305688.9bb948",
+        "name": "initial. exec",
+        "func": "msg.payload =\"sudo \\cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json && sudo rm -rf -d /home/pi/.node-red/flows_raspberrypi_downloaded.json && sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470.01737213134766,
+        "y": 645.1214952468872,
+        "wires": [
+            [
+                "a09018c8.381778"
+            ]
+        ]
+    },
+    {
+        "id": "a09018c8.381778",
+        "type": "exec",
+        "z": "df305688.9bb948",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "install update",
+        "x": 631.0208892822266,
+        "y": 645.4339780807495,
+        "wires": [
+            [],
+            [],
+            [
+                "dc562398.d7ff3"
+            ]
+        ]
+    },
+    {
+        "id": "8b0b91c6.39b0b",
+        "type": "comment",
+        "z": "8d5a7804.52acf8",
+        "name": "Temporäre Änderungen",
+        "info": "",
+        "x": 103.01388549804688,
+        "y": 511.9201431274414,
+        "wires": []
+    },
+    {
+        "id": "721da5fe.81ce3c",
+        "type": "inject",
+        "z": "8d5a7804.52acf8",
+        "name": "",
+        "topic": "",
+        "payload": "Started!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 120.0173568725586,
+        "y": 577.0104370117188,
+        "wires": [
+            [
+                "32769e40.d44532"
+            ]
+        ]
+    },
+    {
+        "id": "32769e40.d44532",
+        "type": "exec",
+        "z": "8d5a7804.52acf8",
+        "command": "sudo mkdir /home/pi/shared/ui/data/",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 391.02084732055664,
+        "y": 578.3160820007324,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ced28bbc.00ef88",
+        "type": "ui_template",
+        "z": "df305688.9bb948",
+        "group": "3ce32450.e0cffc",
+        "name": "changelog",
+        "order": 2,
+        "width": 6,
+        "height": 5,
+        "format": "<style>\n    #mylog {\n        min-height: 100px;\n        padding: 0;\n        white-space: pre;\n    }\n</style>\n\n<div id=\"mylog\" ng-bind=\"msg.payload\">\n    <!-- file contents will go here -->\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1121.0174407958984,
+        "y": 290.0104236602783,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "1a329e97.15b111",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "display changelog",
+        "func": "from time import sleep\nsleep (0.5)\nwith open(\"/home/pi/shared/ui/data/update.log\", \"r\") as file:\n    text=file.read()\nmsg['payload']=text\nreturn msg",
+        "outputs": 1,
+        "x": 931.0174102783203,
+        "y": 290.22915506362915,
+        "wires": [
+            [
+                "ced28bbc.00ef88"
+            ]
+        ]
+    },
+    {
+        "id": "3fe282eb.1d998e",
+        "type": "exec",
+        "z": "df305688.9bb948",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "download manual",
+        "x": 521.0173835754395,
+        "y": 867.3437023162842,
+        "wires": [
+            [],
+            [],
+            [
+                "fc73ea5b.a76b78"
+            ]
+        ]
+    },
+    {
+        "id": "4921d46b.c364fc",
+        "type": "function",
+        "z": "df305688.9bb948",
+        "name": "initial. exec",
+        "func": "msg.payload =\"sudo wget -O /home/pi/shared/ui/data/Manual.pdf https://github.com/OpenScanEu/OpenScan/raw/master/Manual.pdf\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 321.01737213134766,
+        "y": 868.3437423706055,
+        "wires": [
+            [
+                "3fe282eb.1d998e"
+            ]
+        ]
+    },
+    {
+        "id": "37d545f8.3f9e5a",
+        "type": "ui_button",
+        "z": "df305688.9bb948",
+        "name": "",
+        "group": "ddbd496e.93a288",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Download Manual",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 103.0173568725586,
+        "y": 869.4548950195312,
+        "wires": [
+            [
+                "4921d46b.c364fc",
+                "67623fbf.4b16c"
+            ]
+        ]
+    },
+    {
+        "id": "8bced46.98c8a28",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "initial. exec P3",
+        "func": "with open(\"/home/pi/shared/ui/data/update.log\", \"r\") as file:\n    version=str(file.read())[:16]\nmsg['payload']=version\n\nwith open(\"/home/pi/shared/log/currentversion.log\", \"w\") as file:\n    file.write(version)\nmsg['payload']=\"sudo \\cp /home/pi/.node-red/flows_raspberrypi_downloaded.json /home/pi/.node-red/flows_raspberrypi_lastupdate.json && sudo rm -rf -d /home/pi/.node-red/flows_raspberrypi_downloaded.json && sudo cp /home/pi/.node-red/flows_raspberrypi_lastupdate.json /home/pi/.node-red/flows_raspberrypi.json\"\n\nreturn msg",
+        "outputs": 1,
+        "x": 548.0242538452148,
+        "y": 532.1355400085449,
+        "wires": [
+            [
+                "ad5b30c3.a9491"
+            ]
+        ]
+    },
+    {
+        "id": "ab154b97.e908c8",
+        "type": "inject",
+        "z": "df305688.9bb948",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 355.5764389038086,
+        "y": 531.9653797149658,
+        "wires": [
+            [
+                "8bced46.98c8a28"
+            ]
+        ]
+    },
+    {
+        "id": "ad5b30c3.a9491",
+        "type": "debug",
+        "z": "df305688.9bb948",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 721.0174102783203,
+        "y": 530.9479141235352,
+        "wires": []
+    },
+    {
+        "id": "dd37009d.ec59b",
+        "type": "ui_text",
+        "z": "df305688.9bb948",
+        "group": "3ce32450.e0cffc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current version: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1128.017333984375,
+        "y": 248.0104217529297,
+        "wires": []
+    },
+    {
+        "id": "61df614e.0b9d",
+        "type": "inject",
+        "z": "df305688.9bb948",
+        "name": "",
+        "topic": "",
+        "payload": "Started!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 762.6540641784668,
+        "y": 247.73311233520508,
+        "wires": [
+            [
+                "dbb84ace.c53298"
+            ]
+        ]
+    },
+    {
+        "id": "dbb84ace.c53298",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "get version",
+        "func": "with open(\"/home/pi/shared/log/currentversion.log\", \"r\") as file:\n    version=file.read()\n\nmsg['payload']=version\nreturn msg",
+        "outputs": 1,
+        "x": 934.6519050598145,
+        "y": 247.73959350585938,
+        "wires": [
+            [
+                "dd37009d.ec59b"
+            ]
+        ]
+    },
+    {
+        "id": "5914a2db.24e03c",
+        "type": "ui_template",
+        "z": "df305688.9bb948",
+        "group": "ddbd496e.93a288",
+        "name": "Open Manual",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "format": "<md-button style=\"width:100%; height:100%;\"   target=\"_blank\" ng-href=\"/ui/data/Manual.pdf\">\n <div class=\"center\" style=\"position: relative;\n    top: 30%;\">\n  Open Manual\n</div></md-button>\n",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 126.01736450195312,
+        "y": 1074.3437023162842,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33a5a80a.bb3748",
+        "type": "ui_text",
+        "z": "df305688.9bb948",
+        "group": "ddbd496e.93a288",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "Manual text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 689.0174007415771,
+        "y": 970.0105657577515,
+        "wires": []
+    },
+    {
+        "id": "67623fbf.4b16c",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "msg",
+        "func": "msg['payload']=\"downloading manual...\"\nreturn msg\n",
+        "outputs": 1,
+        "x": 306.0173645019531,
+        "y": 924.232666015625,
+        "wires": [
+            [
+                "33a5a80a.bb3748"
+            ]
+        ]
+    },
+    {
+        "id": "17968232.49db5e",
+        "type": "inject",
+        "z": "df305688.9bb948",
+        "name": "",
+        "topic": "",
+        "payload": "Started!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "x": 159.01734924316406,
+        "y": 971.4549589157104,
+        "wires": [
+            [
+                "f2ad7a45.d236b8"
+            ]
+        ]
+    },
+    {
+        "id": "f2ad7a45.d236b8",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "msg",
+        "func": "msg['payload']=\"\"\nreturn msg\n",
+        "outputs": 1,
+        "x": 303.0173645019531,
+        "y": 971.4548950195312,
+        "wires": [
+            [
+                "33a5a80a.bb3748"
+            ]
+        ]
+    },
+    {
+        "id": "fc73ea5b.a76b78",
+        "type": "python3-function",
+        "z": "df305688.9bb948",
+        "name": "msg",
+        "func": "msg['payload']=\"Downloading done\"\nreturn msg\n",
+        "outputs": 1,
+        "x": 692.0173110961914,
+        "y": 861.4549541473389,
+        "wires": [
+            [
+                "33a5a80a.bb3748"
+            ]
         ]
     }
 ]
