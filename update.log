@@ -1,3 +1,16 @@
+2019-11-25_17.04
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Run the following command in putty or 
+the UI won't start after the update:
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+sudo npm install /home/pi/.node-red/ node-red-contrib-isonline && sudo cp -r /home/pi/node_modules/node-red-contrib-isonline /home/pi/.node-red/node_modules/ && sudo reboot -h
+
+  - added zoom
+  - added save updates locally
+  - fixed offline error
+  - fixed background and user manual 
+
 2019-11-24_14.40
   - fix privilege error
   - added "used disk space"
