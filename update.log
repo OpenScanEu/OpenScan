@@ -1,19 +1,19 @@
-2019-11-24 14.40
+2019-11-24_14.40
   - fix privilege error
   - added "used disk space"
   - added DE/EN manual link
   (not uploaded pdf yet)
 
-2019-11-22 13.14
+2019-11-22_13.14
   - cleaning GUI
   - fixing minor bugs
 
-2019-11-17 21.27 
+2019-11-17_21.27 
   - "new updates" always on fixed
   - might restart the RPi twice after
   update
 
-2019-11-17 18.30 First Change      :)
+2019-11-17_18.30 First Change      :)
   !!! on the first restart after this
   update, putty will be disabled once!!!
   - fixed ssh/samba, which did not 
@@ -25,4 +25,4 @@
   - rename System Tab --> Settings
   - click to show side menu instead 
     of always show side menu
-2019-11-17 17.20 created changelog
+2019-11-17_17.20 created changelog
