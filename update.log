@@ -1,44 +1,13 @@
+2019-12-05_19.00
+  - fixed: after stopping a routine 
+  the pi restarted
+  - added: button to save your custom
+  flow ("save current version") in
+  update&info tab
+
 2019-11-26_19.15
   - minor fixes?! :)
-
-2019-11-25_17.04
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Run the following command in putty or 
-the UI won't start after the update:
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-sudo npm install /home/pi/.node-red/ node-red-contrib-isonline && sudo cp -r /home/pi/node_modules/node-red-contrib-isonline /home/pi/.node-red/node_modules/ && sudo reboot -h
-
-  - added zoom
-  - added save updates locally
-  - fixed offline error
-  - fixed background and user manual 
-
-2019-11-24_14.40
-  - fix privilege error
-  - added "used disk space"
-  - added DE/EN manual link
-  (not uploaded pdf yet)
-
-2019-11-22_13.14
-  - cleaning GUI
-  - fixing minor bugs
-
-2019-11-17_21.27 
-  - "new updates" always on fixed
-  - might restart the RPi twice after
-  update
-
-2019-11-17_18.30 First Change      :)
-  !!! on the first restart after this
-  update, putty will be disabled once!!!
-  - fixed ssh/samba, which did not 
-  store the used choice before.
-  - fixed auto-update switch
-  - added user manual
-  - added welcome page (start)
-  - added directory /shared/ui/data/ 
-  - rename System Tab --> Settings
-  - click to show side menu instead 
-    of always show side menu
-2019-11-17_17.20 created changelog
+  
+known bugs/errors:
+  - external camera routine can not be stopped
+  - external camera layout not consistent
