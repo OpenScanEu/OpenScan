@@ -10,3 +10,7 @@ known bugs/errors:
   - external camera layout not consistent
   - conflicting auto-update settings
   - auto-update positioning to rpi menu
+  - sometimes shutdown does not switch of leds
+  - full shutdown?
+#########################################
+contact: info@openscan.eu
