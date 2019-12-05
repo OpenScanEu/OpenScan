@@ -1,9 +1,6 @@
 2019-12-05_19.00
-  - fixed: after stopping a routine 
-  the pi restarted
-  - added: button to save your custom
-  flow ("save current version") in
-  update&info tab
+  - fixed: after stopping a routine  the pi restarted
+  - added: button to save your custom flow ("save current version") in update&info tab
 
 2019-11-26_19.15
   - minor fixes?! :)
