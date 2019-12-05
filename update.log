@@ -8,3 +8,5 @@
 known bugs/errors:
   - external camera routine can not be stopped
   - external camera layout not consistent
+  - conflicting auto-update settings
+  - auto-update positioning to rpi menu
