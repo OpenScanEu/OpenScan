@@ -1,5 +1,6 @@
 2019-12-06-19.17
   - fixed: not able to stop external camera routine
+  - fixed: error direction controller @ external camera
   - added: info concerning smartphone trigger
 
 2019-12-05_19.00
