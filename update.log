@@ -1,16 +1,20 @@
+2019-12-06-19.17
+  - fixed: not able to stop external camera routine
+  - added: info concerning smartphone trigger
+
 2019-12-05_19.00
   - fixed: after stopping a routine  the pi restarted
   - added: button to save your custom flow ("save current version") in update&info tab
 
 2019-11-26_19.15
   - minor fixes?! :)
-  
+
+#########################################
 known bugs/errors:
-  - external camera routine can not be stopped
-  - external camera layout not consistent
-  - conflicting auto-update settings
-  - auto-update positioning to rpi menu
+  - conflicting auto-update preview settings ?
+  - auto-update preview positioning to rpi menu
   - sometimes shutdown does not switch of leds
   - full shutdown?
 #########################################
 contact: info@openscan.eu
+#########################################
