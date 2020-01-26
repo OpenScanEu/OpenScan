@@ -1,3 +1,28 @@
+2020-01-26-14.08
+  !!!IMPORTANT!!! 
+  
+  PLEASE READ:
+  
+  THIS UPDATE MAY TAKE 5-15MIN TO INSTALL
+  INTERNET CONNECTION NEEDED
+  DO NOT TURN OFF THE DEVICE
+  
+  Major Update:
+  - added USB-Support for many digital Cameras
+  see http://www.gphoto.org/doc/remote/ for a full list
+
+  - added: USB Camera interface
+  - added: gphoto library
+  - added: RPi Cam Shutter speed (to solve over-exposure)
+  - added: safety mechanism against overriding the system
+  - added: autodetection if camera is connected (USB + RPi)
+  - changed: moved "auto-update preview" button to RPi camera menu
+  - changed: menu structure
+  - changed: simplified backend structure :)
+  - fixed: auto-update conflict
+  - fixed: not able to run routine after pressing "stop"
+  - removed: RPi Camera on/off switch
+
 2019-12-06-19.17
   - fixed: not able to stop external camera routine
   - fixed: error direction controller @ external camera
@@ -12,10 +37,7 @@
 
 #########################################
 known bugs/errors:
-  - conflicting auto-update preview settings ?
-  - auto-update preview positioning to rpi menu
   - sometimes shutdown does not switch of leds
-  - full shutdown?
 #########################################
 contact: info@openscan.eu
 #########################################
