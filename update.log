@@ -1,3 +1,8 @@
+2020-02-04-10.50
+  - fixed: external camera did not work after last update
+  - fixed: zip file is only shown, when it is ready
+  - fixed: status "--ready--" appeared to early, when routine was not done
+
 2020-01-26-15.47
   !!!!!!!!!!!!!!!!!!IMPORTANT!!!!!!!!!!!!!!!!!! 
   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
