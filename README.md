@@ -14,7 +14,7 @@ In order to add the OpenScan functionality to an existing raspbian system and un
 
 ### Dependencies
 
-`sudo apt-get install python3-pip`
+`sudo apt-get install python3-pip && sudo apt-get install python-pip && sudo apt-get install python-pil`
 
 ### PiCamera
 
@@ -34,32 +34,31 @@ Samba is a fileserver, that allows you to access the Pi's filesystem via network
 
 Change the following lines:
 
-`	workgroup = WORKGROUP
+`	workgroup = WORKGROUP`
 
-	wins support = yes
+`	wins support = yes`
   
-	read only = no
-`
+`	read only = no`
 
 Add to the end of the file:
 
-`[PiShare]
+`[PiShare]`
 
- comment=Raspberry Pi Share
+` comment=Raspberry Pi Share`
  
- path=/home/pi/shared
+` path=/home/pi/shared`
  
- browseable=Yes
+` browseable=Yes`
  
- writeable=Yes
+` writeable=Yes`
  
- only guest=no
+` only guest=no`
  
- create mask=0777
+` create mask=0777`
  
- directory mask=0777
+` directory mask=0777`
  
- public=yes`
+` public=yes`
 
 Set a network password:
 
