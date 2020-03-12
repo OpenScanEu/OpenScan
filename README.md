@@ -85,8 +85,6 @@ for a list of all supported cameras see: http://www.gphoto.org/doc/remote/
 ### NodeRed
 
 NodeRed offers a great browser interface in order to control the steppers, cameras and accessories.
-After the setup you can access the frontend in your browser by typing: `openscanpi:1880/ui`
-The backend can be reached via `openscanpi:1880`
 For more details see: https://nodered.org/docs/getting-started/raspberrypi
 
 Install NodeRed:
@@ -125,13 +123,16 @@ Restart and done :))
 
 `sudo reboot -h`
 
-###Optional: Change hostname
+After the setup you can access the frontend in your browser by typing: `IP:1880/ui`
+The backend can be reached via `IP:1880`
+
+### Optional: Change hostname
 
 `sudo raspi-config`
 
---> networking options --> hostname
+--> Network Options --> Hostname
 
-change hostname to OpenScanPi
+Change hostname to OpenScanPi
 
 Adjust the NodeRed Settings by opening
 
@@ -140,3 +141,10 @@ Adjust the NodeRed Settings by opening
 uncomment "flowFile: ..." and change it to:
 
 `flowFile: 'flows_raspberrypi.json',`
+
+After the setup you can access the frontend in your browser by typing: `OpenScanPi:1880/ui`
+The backend can be reached via `OpenScanPi:1880`
+
+# Usage & Manual
+
+For more information on the usage of the OpenScan Interface please consult the manual: https://github.com/OpenScanEu/OpenScan/raw/master/Manual_en.pdf
