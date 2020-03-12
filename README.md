@@ -124,3 +124,19 @@ Download the OpenScan Flow to node-red:
 Restart and done :))
 
 `sudo reboot -h`
+
+###Optional: Change hostname
+
+`sudo raspi-config`
+
+--> networking options --> hostname
+
+change hostname to OpenScanPi
+
+Adjust the NodeRed Settings by opening
+
+`sudo nano /home/pi/.node-red/settings.js`
+
+uncomment "flowFile: ..." and change it to:
+
+`flowFile: 'flows_raspberrypi.json',`
