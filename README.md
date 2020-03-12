@@ -7,7 +7,6 @@ The Raspberry Pi + OpenScan Pi Shield can be used to control two independent ste
 In order to add the OpenScan functionality to an existing raspbian system and understand all the dependencies, here is a full step-by-step list of the setup:
 
 `sudo apt-get update`
-
 `sudo apt-get upgrade`
 
 ### NodeRed
