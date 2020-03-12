@@ -12,6 +12,10 @@ In order to add the OpenScan functionality to an existing raspbian system and un
 
 `mkdir -p /home/pi/shared/ui/data/old_flows && mkdir /home/pi/shared/log`
 
+### Dependencies
+
+`sudo apt-get install python3-pip`
+
 ### PiCamera
 
 `sudo apt-get install python3-picamera && sudo apt-get install python-picamera`
@@ -20,7 +24,70 @@ In order to add the OpenScan functionality to an existing raspbian system and un
 
 --> interface options --> enable camera
 
+### Samba
+
+Samba is a fileserver, that allows you to access the Pi's filesystem via network folders. This functionality is optional but comes in quite handy.
+
+`sudo apt-get install samba samba-common-bin`
+
+`sudo nano /etc/samba/smb.conf`
+
+Change the following lines:
+
+`	workgroup = WORKGROUP
+
+	wins support = yes
+  
+	read only = no
+`
+
+Add to the end of the file:
+
+`[PiShare]
+
+ comment=Raspberry Pi Share
+ 
+ path=/home/pi/shared
+ 
+ browseable=Yes
+ 
+ writeable=Yes
+ 
+ only guest=no
+ 
+ create mask=0777
+ 
+ directory mask=0777
+ 
+ public=yes`
+
+Set a network password:
+
+`sudo smbpasswd -a pi`
+
+Now you can access the filesystem of the raspberry pi through your network folder using the username "pi" and the given password.
+
+### Gphoto2
+
+GPhoto2 is used to control DSLR cameras, which can be connected via USB. For a list of all supported cameras that can be used within this project see: https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/supported_cameras
+
+For more details see: http://www.gphoto.org/doc/
+
+`sudo apt install libgphoto2-dev `
+
+`sudo apt install gphoto2`
+
+`sudo pip3 install -v gphoto2`
+
+`sudo pip install -v gphoto2`
+
+for a list of all supported cameras see: http://www.gphoto.org/doc/remote/
+
 ### NodeRed
+
+NodeRed offers a great browser interface in order to control the steppers, cameras and accessories.
+After the setup you can access the frontend in your browser by typing: `openscanpi:1880/ui`
+The backend can be reached via `openscanpi:1880`
 For more details see: https://nodered.org/docs/getting-started/raspberrypi
 
 Install NodeRed:
@@ -43,7 +110,7 @@ And edit/add the following line:
 
 `httpStatic: '/home/pi/shared/',`
 
-Add the following palettes to NodeRed:
+Add the some palettes to NodeRed:
 
 `node-red-stop`
 
@@ -55,11 +122,4 @@ Download the OpenScan Flow to node-red:
 
 `sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update.json`
 
-### Samba
 
-### Gphoto2
-
-For more details see: http://www.gphoto.org/doc/
-
-
-for a list of all supported cameras see: http://www.gphoto.org/doc/remote/
