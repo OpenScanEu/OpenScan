@@ -143,7 +143,11 @@ uncomment "flowFile: ..." and change it to:
 `flowFile: 'flows_raspberrypi.json',`
 
 After the setup you can access the frontend in your browser by typing: `OpenScanPi:1880/ui`
-The backend can be reached via `OpenScanPi:1880`
+The backend can be reached via `OpenScanPi:1880` 
+This works from any device, which is in the same network as the raspberry pi.
+
+If you are logged in to your pi, you can also enter the user interface directly through `localhost:1880/ui`
+
 
 # Usage & Manual
 
