@@ -103,9 +103,9 @@ Time to restart the pi :)
 
 Change the default public folder of NodeRed by running
 
-`sudo nano .node-red/settings.js`
+`sudo nano /home/pi/.node-red/settings.js`
 
-And edit/add the following line:
+And uncomment and change the following line (httpStatic:...):
 
 `httpStatic: '/home/pi/shared/',`
 
@@ -121,4 +121,6 @@ Download the OpenScan Flow to node-red:
 
 `sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update.json`
 
+Restart and done :))
 
+`sudo reboot -h`
