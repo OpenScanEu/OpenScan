@@ -6,6 +6,7 @@
   - added: hotspot-mode for Raspberry Pi Camera (experimental)
   - added: settings- acceleration + acceleration ramp
   - added: settings- define angle for manual motor movement
+  - added: confirmation box before installing new version
   - changed: manual will be downloaded automatically (when check updates
     is pressed)
   - changed: code clean-up :)
