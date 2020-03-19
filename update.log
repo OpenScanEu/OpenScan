@@ -1,9 +1,27 @@
+2020-03-19-17.26
+  - replaced: zoom with crop
+  - added: crop x and y to reduce filesize
+  - added: acceleration ramp for smoother movement
+  - added: experimental mode (see settings & camera)
+  - added: hotspot-mode for Raspberry Pi Camera (experimental)
+  - added: settings- acceleration + acceleration ramp
+  - added: settings- define angle for manual motor movement
+  - changed: manual will be downloaded automatically (when check updates
+    is pressed)
+  - changed: code clean-up :)
+  - fixed: sometimes the ringlight did not turn off on shutdown/stayed on
+    after boot
+  - fixed: english user manual has not been reachable before
+  - removed: German user manual (I am really sorry, but keeping only the
+    English version up-to-date is already quite a task)
+  
+
 2020-03-05-17.53
   - no more waiting for the zip file to be created :)
 
 2020-02-11-16.11
   - added: A settings file will be saved with all taken photos containing
-  all routine and camera parameters (included in zip)
+    all routine and camera parameters (included in zip)
   - added: upload a setting file with parameters from past routines
   - added: support button (buy me a coffee :))
   - changed: spacing and padding of all UI elements to fit smaller screens
@@ -52,7 +70,7 @@
 
 #########################################
 known bugs/errors:
-  - sometimes shutdown does not switch of leds
+  - ... (definitely there will be some hidden errors in my code-mess)
 #########################################
 contact: info@openscan.eu
 #########################################
