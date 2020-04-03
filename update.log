@@ -1,3 +1,8 @@
+2020-04-03-14.39
+  - added: feedback-option, where you can upload an image set to my server
+    and get feedback on the image quality & routine settings via email. This
+    process is currently done manually and thus might take one or two days :)
+
 2020-03-19-17.26
   - replaced: zoom with crop
   - added: crop x and y to reduce filesize
