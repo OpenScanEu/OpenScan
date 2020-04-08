@@ -1,3 +1,9 @@
+2020-04-08-23.36
+  - added: feature detection - this will mark all the features that the software
+  will see in an image and mark those with green dots. This helps spotting critical
+  areas before taking a larger photo set. Note: This is a cloud functionality and
+  the preview image will be transmitted and processed on my server.
+
 2020-04-03-14.39
   - added: feedback-option, where you can upload an image set to my server
     and get feedback on the image quality & routine settings via email. This
