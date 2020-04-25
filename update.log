@@ -1,3 +1,10 @@
+2020-04-25-17.17
+  - added: larger preview window
+  - added: popup, when a new update is available
+  - added: tooltips (when moving mouse over buttons/switches)
+  - improved: increased the preview speed to 1 photo/sec (instead of 0.5/s)
+  - fixed: conflict between auto-update and get features
+
 2020-04-08-23.36
   - added: feature detection - this will mark all the features that the software
   will see in an image and mark those with green dots. This helps spotting critical
