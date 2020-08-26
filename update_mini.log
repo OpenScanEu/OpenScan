@@ -2,15 +2,15 @@
   - SIMPLIFIED USER INTERFACE FOR THE OPENSCAN AND ESPECIALLY OPENSCAN MINI
   - added menu on startscreen
   - added pre-defined routines (dropdown: Load Programs)
-  - added wifi-connection via User Interface in Settings Sub-menu
+  - added wifi-connection form in Settings Sub-menu
   - added Button "Change to Expert GUI"
   - added Button "Model: OpenScan Mini or OpenScan"
   - added dropdown to choose the camera model (instead of setting the resolution manually)
   - changed file explorer has now its own sub-menu (in preparation of the cloud-processing :))
   - changed orientation of the preview
   - changed color-theme :)
-  - removed openscan-cloud (as it was not used very much and would need quite some improvement)
-  - removed camera-brightness (and instead fixed this value at 50)
-  - removed camera-contrast (and instead fixed this value at 0)
+  - removed openscan-cloud sub menu (as it was not used very much and would need quite some improvement)
+  - removed camera-brightness slider (and instead fixed this value at 50)
+  - removed camera-contrast slider (and instead fixed this value at 0)
   - removed external camera, bluetooth, smartphone camera
 
