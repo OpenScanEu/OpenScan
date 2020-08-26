@@ -1,0 +1,9 @@
+2020-08-26-17.17
+  - Simplified user interface
+  - removed unnecessary functions (external camera, bluetooth, smartphone)
+  - menu on startscreen
+  - added pre-defined routines
+  - added wifi-connection via User Interface (for instance when Ethernet cable is plugged in)
+  - removed: openscan-cloud (as it was not used very much and would need quite some improvement)
+  - changed: orientation of the preview
+  - ...
