@@ -27,6 +27,12 @@ sudo apt-get install python3-picamera && sudo apt-get install python-picamera
 sudo raspi-config
 ```
 --> interface options --> enable camera
+### Increase GPU Memory
+(which seems to be needed for a stable operation of the interface)
+```
+sudo raspi-config
+```
+-->Performance Options --> GPU Memory --> 256 (instead of 128)
 
 ### Samba
 
