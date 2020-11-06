@@ -129,7 +129,8 @@ Add the some palettes to NodeRed:
 ```
 node-red-stop
 cd ~/.node-red
-npm install node-red-dashboard && npm install node-red-contrib-python3-function && npm install node-red-contrib-fs-ops && npm install node-red-contrib-isonline
+npm install node-red-dashboard && npm install node-red-contrib-python3-function && npm install node-red-contrib-fs-ops && npm install node-red-contrib-isonline && npm i node-red-node-ui-table
+
 ```
 
 Download the OpenScan Flow to node-red:
