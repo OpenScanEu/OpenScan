@@ -1,6 +1,20 @@
 2020-11-04-13.13
+  ########## MAJOR UPDATE ########## ---> FREEZE :)
   - This is a unified and simplified Firmware for both the OpenScan Classic and the OpenScan Mini
-  - improved: overall stability
-  - improved: increased speed from 3s to 1s per photo
+  - improved: overall stability & speed
+  - improved: increased photo speed from 3s to 1s per photo
+  - improved: optimized routine --> less photos + better coverage
+  - improved: layout and usability
+  - improved: online file browser
+  - removed: unnecessary parameters
+  - removed: gphoto (USB Camera support) --> moved to "dev mode"
+  - added: change between OpenScan Classic & Mini with one click
+  - added: Wifi connecter, so you just need to plugin ethernet on first boot and not need to
+  modify the WPA_supplicant.conf anymore
+  - added: sort files by date/time/name/nr. of photos/size
+  - added: delete sets individually
+  - added: welcome message :)
+  - added: change to "DEV MODE" (with a some more options but also some bugs, without documentation)
+  - added: set awb gain values
   - fixed: removed double image compression
-  - ...
+  - fixed: inconsistent photos caused by variable awb gains
