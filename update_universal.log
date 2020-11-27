@@ -4,9 +4,12 @@
   - improved: increased photo speed from 3s to 1s per photo
   - improved: optimized routine --> less photos + better coverage
   - improved: layout and usability
-  - improved: online file browser
+  - improved: file browser
+  
   - removed: unnecessary parameters
   - removed: gphoto (USB Camera support) --> moved to "dev mode"
+  
+  - added: live preview
   - added: change between OpenScan Classic & Mini with one click
   - added: Wifi connecter, so you just need to plugin ethernet on first boot and not need to
            modify the WPA_supplicant.conf anymore
