@@ -1,5 +1,9 @@
 # Install experimental OpenScanCloud processing feature
 
+##  Prerequisites
+
+You should have installed either the simplified or expert user interface following this instructions (see https://github.com/OpenScanEu/OpenScan) or by using a given SD image (see https://en.openscan.eu/pi-shield).
+
 ## Setup
 
 Save the current user interface by opening the command terminal and run:
