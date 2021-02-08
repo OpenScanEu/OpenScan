@@ -41,3 +41,9 @@ Follow these steps to upload and process your existing photoset:
 6.  After some time the status will either change to "done" or some error message. In the first case a download link will be generated (valid for 14 days)
 7.	Please let me know, if everything works, or if you encounter any errors & error codes.
 
+## Demo video :)
+
+[![OpenScan Cloud Processing](https://i.imgur.com/3m1JBVL.png)](https://youtu.be/EhvFq-OYa1g "OpenScan Cloud Processing")
+
+
+
