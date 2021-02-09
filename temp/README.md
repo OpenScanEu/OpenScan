@@ -13,7 +13,7 @@ Save the current user interface by opening the command terminal and run:
 
 Install requests module for python
 ```
-	pip3 install requests
+	pip install requests
 ```
 
 
