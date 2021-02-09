@@ -11,6 +11,12 @@ Save the current user interface by opening the command terminal and run:
 	cp /home/pi/.node-red/flows_raspberrypi.json /home/pi/.node-red/backup_flows_raspberrypi.json
 ```
 
+Install requests module for python
+```
+	pip3 install requests
+```
+
+
 Install the modified User Interface:
 ```
 	sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/temp/2020-06-02_OSC.json
