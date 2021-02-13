@@ -51,5 +51,40 @@ Follow these steps to upload and process your existing photoset:
 
 [![OpenScan Cloud Processing](https://i.imgur.com/3m1JBVL.png)](https://youtu.be/EhvFq-OYa1g "OpenScan Cloud Processing")
 
+## More Details
 
+### Possible Status Message:
 
+#### created:
+  file has been uploaded
+
+#### file received:
+  file has been received and downloaded to the OpenScan Server
+
+#### start processing:
+  processing has been started
+
+#### alignment failed:
+  If x or less percent of the images get aligned, the processing will be aborted, as the results will not be acceptable (There are various reasons for a set to fail, usually      it has to do with the lack of features (https://en.openscan.eu/photogrammetry and https://en.openscan.eu/scan-gallery for some more background and good examples). I am still   determining the threshold percentage x, but currently it is set to 50%
+
+#### done:
+    The set has been processed and the result.zip should be accessible within the next minute
+
+## Next Steps
+
+* Further testing :))
+* unfortunately dropbox only allows 200-300mb files, so I might need to either implement a multi-file upload (which I really do not like) or use another service (e.g. google, box or others), which I like even less... The issue with dropbox comes from the fact, that I use the "get_temporary_upload_link" (https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox.Dropbox.files_get_temporary_link) which seems to have an undocumented limit of somewhat between 200-300mb per file...
+* install missing requests module automatically
+* show part of the cloud id (if entered & saved)
+* Create a desktop upload tool (I would love to see a standalone uploader, where you can enter&save your cloud Id and upload a zip file from your PC or maybe even smartphone?!)
+
+## Manual Upload via OpenScan User Interface
+
+You can upload your own image set by copying a zip file to /home/pi/shared/ui/data/zip and upload this file via the user interface
+
+Note, that the easiest way to copy a file to the pi is adding the device as network drive: \\openscanpi\pi (user: pi, password: raspberry)
+
+Important:
+* do not use any sub-folders in the zip-file
+* only use .jpg files in the zip file (NO .jpeg or .JPG or .png or others as this will be rejected after uploading)
+* stay within the given limits (filesize and image-count)
