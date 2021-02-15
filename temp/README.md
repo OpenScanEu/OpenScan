@@ -40,7 +40,8 @@ You should be ready to access the new functions via the userinterface at opensca
 
 Follow these steps to upload and process your existing photoset:
 1.	you will be able to see your existing files and download the image sets from the pi to your computer via "ZIP" link (similar to before)
-2.	in order to activate the cloud functionality enter your CLOUD ID at the bottom right and press "SAVE CLOUD ID" 
+2.	in order to activate the cloud functionality enter your CLOUD ID at the bottom right and press "SAVE CLOUD ID". You can either use your personal Cloud ID (which can be obtained at www.openscan.eu/openscan-cloud or use this public-test-ID: __59521b73198a43bcb9ed8f8e67d12b3XXf56X49Xcbe14677e5__
+(Important note: the public ID will be removed at some point in the future)
 3.	Press "REFRESH" and you should be able to see limit_photos, limit_filesize and Credit (in Gigabyte)
 4.	Uploading and processing should be as simple as selecting a set in the table and press "Upload and compute …"
 5.	You can query the status from time to time by pressing "REFRESH", but do not spam, as this will crash/reboot your device (known issue)
