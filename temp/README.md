@@ -76,9 +76,9 @@ Follow these steps to upload and process your existing photoset:
 
 ## Manual Upload via OpenScan User Interface
 
-You can upload your own image set by copying a zip file to /home/pi/shared/ui/data/zip and upload this file via the user interface
+You can upload your own image set by copying a zip file to /home/pi/shared/ui/data/zip/ and upload this file via the user interface
 
-Note, that the easiest way to copy a file to the pi is adding the device as network drive: \\openscanpi\pi (user: pi, password: raspberry)
+Note, that the easiest way to copy a file to the pi is adding the device as network drive: \\\openscanpi\pi (user: pi, password: raspberry)
 
 Important:
 * do not use any sub-folders in the zip-file
