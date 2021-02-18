@@ -68,16 +68,11 @@ Follow these steps to upload and process your existing photoset:
 #### alignment failed:
   If x or less percent of the images get aligned, the processing will be aborted, as the results will not be acceptable (There are various reasons for a set to fail, usually      it has to do with the lack of features (https://en.openscan.eu/photogrammetry and https://en.openscan.eu/scan-gallery for some more background and good examples). I am still   determining the threshold percentage x, but currently it is set to 50%
 
+### zip error
+  Indicating that the zip file or its content is broken
+
 #### done:
     The set has been processed and the result.zip should be accessible within the next minute
-
-## Next Steps
-
-* Further testing :))
-* unfortunately dropbox only allows 200-300mb files, so I might need to either implement a multi-file upload (which I really do not like) or use another service (e.g. google, box or others), which I like even less... The issue with dropbox comes from the fact, that I use the "get_temporary_upload_link" (https://dropbox-sdk-python.readthedocs.io/en/latest/api/dropbox.html#dropbox.dropbox.Dropbox.files_get_temporary_link) which seems to have an undocumented limit of somewhat between 200-300mb per file...
-* install missing requests module automatically
-* show part of the cloud id (if entered & saved)
-* Create a desktop upload tool (I would love to see a standalone uploader, where you can enter&save your cloud Id and upload a zip file from your PC or maybe even smartphone?!)
 
 ## Manual Upload via OpenScan User Interface
 
@@ -87,5 +82,20 @@ Note, that the easiest way to copy a file to the pi is adding the device as netw
 
 Important:
 * do not use any sub-folders in the zip-file
-* only use .jpg files in the zip file (NO .jpeg or .JPG or .png or others as this will be rejected after uploading)
+* only use the following image-filetypes: jpg/jpeg, png, bmp, tiff , gif
 * stay within the given limits (filesize and image-count)
+
+## Changelog
+
+2021-02-18:
+  - fixed: filesize limit 200-300mb by dropbox --> splitting file on the client device and uploading several parts of 200mb or less
+  - added: previewing part of the cloud id "12asvsa1***"
+  - added: support different image formats (jpg/jpeg, png, bmp, tiff , gif)
+  - added: more detailed upload status
+  - improved: stability and minor displaying issues (showing wrong/no information on errors)
+
+## Next Steps
+
+* Further testing :))
+* install missing requests module automatically
+* Create a desktop upload tool (I would love to see a standalone uploader, where you can enter&save your cloud Id and upload a zip file from your PC or maybe even smartphone?!)
