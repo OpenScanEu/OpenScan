@@ -51,7 +51,7 @@ def createSettings():
             file.write(set[1])
     os.system('sudo rm /home/pi/temp/settings')
 
-installDepencencies()
+installDependencies()
 
 for path in paths:
     if not os.path.isdir(path):
