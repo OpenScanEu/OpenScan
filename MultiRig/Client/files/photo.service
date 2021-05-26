@@ -1,0 +1,15 @@
+[Unit]
+Description=watch for photos
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/app/photo.py
+Restart=on-abort
+StandardOutput=file:/home/pi/error.log
+StandardError=file:/home/pi/error.log
+User=pi
+
+
+[Install]
+WantedBy=multi-user.target
