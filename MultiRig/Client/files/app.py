@@ -78,10 +78,10 @@ def setSettings(setting,value):
 #################### UPDATE ##################################
 @app.route('/getUpdate')
 def getUpdate():
-    return('TO DO')
-    #to do get update from github
-
-
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O updater.py && python dependencies.py && python updater.py'
+    os.system('sudo reboot -h now')
+    return
+    
 ####################### PROJECT ##############################
 @app.route('/project/create/<name>', methods=['post','get'])
 def createProject(name):
@@ -108,11 +108,6 @@ def zipProject(name):
     shutil.make_archive(path+'/photos', 'zip', path+'/photos')
     shutil.make_archive(path+'/settings', 'zip', path+'/settings')
     return('project zipped')
-
-@app.route('/project/downloadSettings/<name>', methods=['post','get'])
-def downloadProjectSettings(name):
-    return('TO DO')
-# TO DO
 
 @app.route('/project/downloadPhotos/<name>', methods=['post','get'])
 def downloadProjectPhotos(name):
