@@ -57,3 +57,4 @@ for file in os.listdir('/home/pi/temp/'):
     os.system('sudo mv /home/pi/temp/'+file+ ' /home/pi/app/'+file)
 
 os.system('rmdir /home/pi/temp/')
+os.system('sudo reboot')
