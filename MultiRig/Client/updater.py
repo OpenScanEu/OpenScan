@@ -37,8 +37,8 @@ def createService(file):
     if 'service' in file:
         print('creating '+file)
         os.system('sudo cp /home/pi/temp/'+file+' /lib/systemd/system/'+file)
-        os.system('sudo systemctl enable photo.service')
-        os.system('sudo systemctl restart photo.service')
+        os.system('sudo systemctl enable '+file)
+        os.system('sudo systemctl restart '+file)
         os.system('sudo rm /home/pi/temp/'+file)
     os.system('sudo systemctl daemon-reload')
         
