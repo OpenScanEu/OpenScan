@@ -44,8 +44,8 @@ def load_cam_settings():
     camera.exposure_compensation = int(load('cam_exposure_compensation'))
     quality = int(load('cam_quality'))
 
-    cropx = int(load('cam_cropx'))
-    cropy = int(load('cam_cropy'))
+    cropx = float(load('cam_cropx'))
+    cropy = float(load('cam_cropy'))
     downsize_preview = float(load('cam_downsize_preview'))
     zoom_x_center = cropx / 200
     zoom_y_center = cropy / 200
