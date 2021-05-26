@@ -47,8 +47,9 @@ def createSettings():
         settings=file.readlines()
     for line in settings:
         set=line.rstrip('\n').split(';')
-        with open('/home/pi/settings/'+set[0],'w+') as file:
-            file.write(set[1])
+        if not os.isfile('/home/pi/settings/'+set[0]):
+            with open('/home/pi/settings/'+set[0],'w+') as file:
+                file.write(set[1])
     os.system('sudo rm /home/pi/temp/settings')
 
 installDependencies()
