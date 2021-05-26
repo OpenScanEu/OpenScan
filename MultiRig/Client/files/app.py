@@ -76,11 +76,17 @@ def setSettings(setting,value):
     return setting
 
 #################### UPDATE ##################################
-@app.route('/getUpdate')
-def getUpdate():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O updater.py && python dependencies.py && python updater.py')
+@app.route('/update/firmware')
+def updateFirmware():
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O updater.py  && python updater.py')
     os.system('sudo reboot -h now')
     return
+
+@app.route('/update/dependencies')
+def updateDependencies():
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && python dependencies.py')
+    os.system('sudo reboot -h now')
+
     
 ####################### PROJECT ##############################
 @app.route('/project/create/<name>', methods=['post','get'])
