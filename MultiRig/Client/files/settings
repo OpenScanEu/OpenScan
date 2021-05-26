@@ -6,7 +6,7 @@ cam_awb_mode;off
 cam_cropy;0
 cam_meter_mode;spot
 current_project;default
-cam_awb_red;1,7
+cam_awb_red;1.7
 cam_downsize_preview;0.5
 cam_quality;95
 status;ready
