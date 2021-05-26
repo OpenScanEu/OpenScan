@@ -1,0 +1,14 @@
+[Unit]
+Description=app
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/app/app.py
+WorkingDirectory=/home/pi/
+StandardOutput=inherit
+StandardError=file:/home/pi/error.log
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
