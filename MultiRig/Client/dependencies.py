@@ -6,7 +6,7 @@ def installDependencies():
     os.system('sudo raspi-config nonint do_memory_split 256')
     os.system('sudo apt -y install python3-pip python-pip')
     os.system('pip install picamera')
-    os.system('pip3 install picamera flask')
+    os.system('pip3 install picamera flask requests')
     os.system('sudo apt-get -y install python3-rpi.gpio')
     os.system('sudo apt-get -y install zip unzip')
     
