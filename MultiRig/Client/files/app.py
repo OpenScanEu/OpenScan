@@ -38,7 +38,7 @@ def preview():
     return Response(
         stream_with_context(read_file_chunks(path)),
         headers={
-            'Content-Disposition': f'attachment; filename={name2}'
+            'Content-Disposition': f'attachment; filename={name2}'})
 
 ############################# PHOTO SERVICE
 
@@ -121,7 +121,7 @@ def downloadProjectPhotos(name):
     return Response(
         stream_with_context(read_file_chunks(path)),
         headers={
-            'Content-Disposition': f'attachment; filename={name2}'
+            'Content-Disposition': f'attachment; filename={name2}'})
           
 
 @app.route('/project/delete/<name>', methods=['post','get'])
