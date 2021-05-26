@@ -3,7 +3,7 @@
 import os
 import requests
 import shutil
-
+import time
 
 files=('app.service','photo.service','app.py','photo.py','settings')
 paths=('/home/pi/settings/','/home/pi/projects/','/home/pi/app/','/home/pi/temp/')
