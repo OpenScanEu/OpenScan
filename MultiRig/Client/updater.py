@@ -1,4 +1,3 @@
-
 # run this script to update/install a client
 
 import os
@@ -21,13 +20,12 @@ def download(file):
         print('ERROR - download failed for '+file)
         exit()
 
-
 def createService(file):
     if 'service' in file:
         print('creating '+file)
         os.system('sudo cp /home/pi/temp/'+file+' /lib/systemd/system/'+file)
         os.system('sudo systemctl enable '+file)
-        os.system('sudo systemctl restart '+file)
+        #os.system('sudo systemctl restart '+file)
         os.system('sudo rm /home/pi/temp/'+file)
 
 def createSettings():
