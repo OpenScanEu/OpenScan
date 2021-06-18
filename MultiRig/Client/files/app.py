@@ -1,8 +1,17 @@
 from flask import Flask, make_response, jsonify, request, abort, Response, stream_with_context
 import os
 import shutil
+import RPi.GPIO as GPIO
+
 
 CHUNK_SIZE = 8192
+ringlight_pin_1 = 23
+ringlight_pin_2 = 24
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(ringlight_pin_1, GPIO.OUT)
+GPIO.setup(ringlight_pin_2, GPIO.OUT)
+
 def read_file_chunks(path):
     with open(path, 'rb') as fd:
         while 1:
