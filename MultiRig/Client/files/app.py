@@ -105,7 +105,8 @@ def setSettings(setting,value):
 #################### UPDATE ##################################
 @app.route('/update/firmware')
 def updateFirmware():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O updater.py  && python3 updater.py')
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O "/home/pi/updater.py"')
+    os.system('python3 "/home/pi/updater.py"')
     os.system('sudo reboot -h now')
     return
 
