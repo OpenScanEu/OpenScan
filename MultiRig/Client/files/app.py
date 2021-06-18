@@ -28,6 +28,24 @@ def shutdown():
     os.system('sudo shutdown -h now')
     return 'shut down'
 
+############################ RINGLIGHT
+
+@app.route('/ringlight/<number>/<state>', methods=['post', 'get'])
+
+def ringlight(number, state):
+    if number == "1":
+        if state == "on":
+            GPIO.output(ringlight_pin_1, GPIO.HIGH)
+        else:
+            GPIO.output(ringlight_pin_1, GPIO.LOW)
+    elif number == "2":
+        if state == "on":
+            GPIO.output(ringlight_pin_2, GPIO.HIGH)
+        else:
+            GPIO.output(ringlight_pin_2, GPIO.LOW)
+    else:
+        return 'invalid cmd'
+    return 'done'
 
 ############################ PREVIEW
 
