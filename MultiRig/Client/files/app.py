@@ -105,15 +105,23 @@ def setSettings(setting,value):
 
 #################### UPDATE ##################################
 
+@app.route('/update/get')
+def getUpdate():
+    try:
+        os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O "/home/pi/updater.py"')
+        os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O "/home/pi/dependencies.py"')
+        return 'downloaded firmware & dependencies'
+    except:
+        return 'error downloading files'
+
 @app.route('/update/firmware')
-def updateFirmware():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O "/home/pi/updater.py" && python3 "/home/pi/updater.py"')
+def installFirmware():
+    os.system('python3 "/home/pi/updater.py"')
     return 'updating firmware'
 
 @app.route('/update/dependencies')
-def updateDependencies():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && python3 dependencies.py')
-    os.system('sudo reboot -h now')
+def installDependencies():
+    os.system('python3 "/home/pi/dependencies.py"')
     return 'updating dependencies'
 
 
