@@ -1,3 +1,4 @@
+
 # run this script to update/install a client
 
 import os
@@ -6,7 +7,6 @@ import shutil
 
 files=('app.service','photo.service','app.py','photo.py','settings')
 paths=('/home/pi/settings/','/home/pi/projects/','/home/pi/app/','/home/pi/temp/')
-
 
 def download(file):
     url='https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/files/'+file
@@ -29,8 +29,7 @@ def createService(file):
         os.system('sudo systemctl enable '+file)
         os.system('sudo systemctl restart '+file)
         os.system('sudo rm /home/pi/temp/'+file)
-    os.system('sudo systemctl daemon-reload')
-        
+
 def createSettings():
     with open('/home/pi/temp/settings','r') as file:
         settings=file.readlines()
@@ -41,7 +40,6 @@ def createSettings():
                 file.write(set[1])
     os.system('sudo rm /home/pi/temp/settings')
 
-    
 for path in paths:
     if not os.path.isdir(path):
         os.mkdir(path)
@@ -50,11 +48,11 @@ for file in files:
     download(file)
     createService(file)
 
-   
 createSettings()
 
 for file in os.listdir('/home/pi/temp/'):
     os.system('sudo mv /home/pi/temp/'+file+ ' /home/pi/app/'+file)
 
-os.system('rmdir /home/pi/temp/')
+os.system('rm -r /home/pi/temp/')
+os.system('sudo systemctl daemon-reload')
 os.system('sudo reboot')
