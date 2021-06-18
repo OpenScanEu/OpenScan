@@ -1,3 +1,4 @@
+#
 from flask import Flask, make_response, jsonify, request, abort, Response, stream_with_context
 import os
 import shutil
@@ -103,17 +104,18 @@ def setSettings(setting,value):
     return setting
 
 #################### UPDATE ##################################
+
 @app.route('/update/firmware')
 def updateFirmware():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O "/home/pi/updater.py"')
-    os.system('python3 "/home/pi/updater.py"')
-    os.system('sudo reboot -h now')
-    return
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O "/home/pi/updater.py" && python3 "/home/pi/updater.py"')
+    return 'updating firmware'
 
 @app.route('/update/dependencies')
 def updateDependencies():
     os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && python3 dependencies.py')
     os.system('sudo reboot -h now')
+    return 'updating dependencies'
+
 
     
 ####################### PROJECT ##############################
