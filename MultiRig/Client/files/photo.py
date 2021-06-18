@@ -2,11 +2,10 @@ import RPi.GPIO as GPIO  # import RPi.GPIO module
 from picamera import PiCamera
 import time
 
-inputPin = 26
+counter = 0
 quality = 100
 preview_filepath = '/home/pi/preview.jpg'
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(inputPin, GPIO.IN)
 
 def load(setting):
     with open('/home/pi/settings/' + setting, 'r') as file:
@@ -19,6 +18,8 @@ def set(setting, content):
     with open('/home/pi/settings/' + setting, 'w') as file:
         file.write(str(content))
 
+inputPin = int(load('input_pin'))
+counter_threshold = int(load('counter_threshold'))
 
 cam_resx = int(load('cam_resx'))
 cam_resy = int(load('cam_resy'))
@@ -28,6 +29,7 @@ y = cam_resy
 downsize_preview = 1
 
 camera = PiCamera(resolution=(cam_resx, cam_resy))
+GPIO.setup(inputPin, GPIO.IN)
 time.sleep(1)
 
 def load_cam_settings():
@@ -43,6 +45,7 @@ def load_cam_settings():
     camera.contrast = int(load('cam_contrast'))
     camera.exposure_compensation = int(load('cam_exposure_compensation'))
     quality = int(load('cam_quality'))
+
 
     cropx = float(load('cam_cropx'))
     cropy = float(load('cam_cropy'))
@@ -73,7 +76,15 @@ while True:
         filepath = '/home/pi/projects/'+current_project+'/photos/'
         print('taking photo')
         while load('status') == 'take_photo':
+            if counter != 0:
+                print(counter)
             if GPIO.input(inputPin):
+                counter = counter + 1
+            if not GPIO.input(inputPin):
+                counter = 0
+            if counter == counter_threshold:
                 camera.capture(filepath+str(time.time())+'.jpg', quality=quality, resize=(x, y))
                 print('photo taken')
+                counter = 0
         print('done')
+
