@@ -16,4 +16,6 @@ cam_resx;3280
 cam_contrast;0
 cam_exposure_mode;off
 cam_resy;2464
-version;2
+inputpin;15
+counter_threshold;20
+version;3
