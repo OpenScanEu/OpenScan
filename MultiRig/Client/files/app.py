@@ -105,13 +105,13 @@ def setSettings(setting,value):
 #################### UPDATE ##################################
 @app.route('/update/firmware')
 def updateFirmware():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O updater.py  && python updater.py')
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/updater.py -O updater.py  && python3 updater.py')
     os.system('sudo reboot -h now')
     return
 
 @app.route('/update/dependencies')
 def updateDependencies():
-    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && python dependencies.py')
+    os.system('wget https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/MultiRig/Client/dependencies.py -O dependencies.py && python3 dependencies.py')
     os.system('sudo reboot -h now')
 
     
