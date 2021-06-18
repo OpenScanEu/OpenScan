@@ -18,4 +18,6 @@ cam_exposure_mode;off
 cam_resy;2464
 input_pin;15
 counter_threshold;20
+ringlight1;off
+ringlight2;off
 version;4
