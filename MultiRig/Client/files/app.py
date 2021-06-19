@@ -161,7 +161,7 @@ def deleteProejct(name):
     shutil.rmtree('/home/pi/projects/'+name)
     return ('project deleted')
 
-@app.route('project/deleteall', methods=['post','get'])
+@app.route('/project/deleteall', methods=['post','get'])
 def deleteAllProjects():
     os.system('rm -r /home/pi/projects')
     os.system('mkdir /home/pi/projects/')
