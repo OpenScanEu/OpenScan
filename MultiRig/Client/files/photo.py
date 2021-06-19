@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO  # import RPi.GPIO module
 from picamera import PiCamera
 import time
+import zipfile
+
 
 counter = 0
 quality = 100
@@ -74,6 +76,7 @@ while True:
     if status == 'take_photo':
         current_project = load('current_project')
         filepath = '/home/pi/projects/'+current_project+'/photos/'
+        z = zipfile.ZipFile('/home/pi/projects/'+current_project+'/photos.zip'
         print('taking photo')
         while load('status') == 'take_photo':
             if counter != 0:
@@ -83,7 +86,9 @@ while True:
             if not GPIO.input(inputPin):
                 counter = 0
             if counter == counter_threshold:
-                camera.capture(filepath+str(time.time())+'.jpg', quality=quality, resize=(x, y))
+                t=str(time.time())
+                camera.capture(filepath+t+'.jpg', quality=quality, resize=(x, y))
+                z.write(filepath+t+'.jpg')
                 print('photo taken')
                 counter = 0
         print('done')
