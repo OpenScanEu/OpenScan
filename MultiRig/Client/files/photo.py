@@ -76,7 +76,7 @@ while True:
     if status == 'take_photo':
         current_project = load('current_project')
         filepath = '/home/pi/projects/'+current_project+'/photos/'
-        z = zipfile.ZipFile('/home/pi/projects/'+current_project+'/photos.zip'
+        z = zipfile.ZipFile('/home/pi/projects/'+current_project+'/photos.zip', 'a')
         print('taking photo')
         while load('status') == 'take_photo':
             if counter != 0:
@@ -91,5 +91,6 @@ while True:
                 z.write(filepath+t+'.jpg')
                 print('photo taken')
                 counter = 0
+        z.close()
         print('done')
 
