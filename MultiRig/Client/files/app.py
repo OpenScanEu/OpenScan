@@ -147,8 +147,9 @@ def zipProject(name):
     if not os.path.isdir(path):
         abort(405, description="project does not exist")
     if os.path.isfile(path+'/settings.zip'):
-        abort(405, description="already zipped")
+        abort(406, description="already zipped")
 
+    #### TO DO: CHANGE ZIPPING TO FILE BY FILE AND DELETE OLD FILES ;)
     shutil.make_archive(path+'/photos', 'zip', path+'/photos/')
     shutil.make_archive(path+'/settings', 'zip', path+'/settings/')
     return('project zipped')
