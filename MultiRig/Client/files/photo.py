@@ -89,6 +89,7 @@ while True:
                 t=str(time.time())
                 camera.capture(filepath+t+'.jpg', quality=quality, resize=(x, y))
                 z.write(filepath+t+'.jpg')
+                os.remove(filepath+t+'.jpg')
                 print('photo taken')
                 counter = 0
         z.close()
