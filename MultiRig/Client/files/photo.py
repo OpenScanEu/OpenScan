@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO  # import RPi.GPIO module
 from picamera import PiCamera
 import time
 import zipfile
+import os
 
 
 counter = 0
