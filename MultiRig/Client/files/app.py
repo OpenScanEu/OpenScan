@@ -139,6 +139,8 @@ def createProject(name):
 
     for i in os.listdir('/home/pi/settings/'):
         shutil.copy('/home/pi/settings/'+i, path+'/settings/'+i)
+    
+    os.mknod(path+'/photos.zip')
     return ('project created')
 
 @app.route('/project/zip/<name>', methods=['post','get'])
