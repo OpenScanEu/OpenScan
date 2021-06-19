@@ -143,19 +143,6 @@ def createProject(name):
     os.mknod(path+'/photos.zip')
     return ('project created')
 
-@app.route('/project/zip/<name>', methods=['post','get'])
-def zipProject(name):
-    path='/home/pi/projects/'+name
-    if not os.path.isdir(path):
-        abort(405, description="project does not exist")
-    if os.path.isfile(path+'/settings.zip'):
-        abort(406, description="already zipped")
-
-    #### TO DO: CHANGE ZIPPING TO FILE BY FILE AND DELETE OLD FILES ;)
-    shutil.make_archive(path+'/photos', 'zip', path+'/photos/')
-    shutil.make_archive(path+'/settings', 'zip', path+'/settings/')
-    return('project zipped')
-
 @app.route('/project/downloadPhotos/<name>', methods=['post','get'])
 def downloadProjectPhotos(name):
     path = '/home/pi/projects/'+name+'/photos.zip'
