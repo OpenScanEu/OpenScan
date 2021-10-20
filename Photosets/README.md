@@ -26,4 +26,4 @@ This is a 3d printed miniature used to test the accuracy of DLP/SLA printers. Th
 
 |Image Set|OpenScanCloud|RealityCapture|3DF Zephyr|Agisoft Metashape|Meshroom|VisualSFM|Regard3D|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|01 |x | | | | | | |
+|01 |x |x | | | | | |
