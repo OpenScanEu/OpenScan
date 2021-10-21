@@ -135,7 +135,7 @@ npm install node-red-dashboard && npm install node-red-contrib-python3-function 
 
 Download the OpenScan Flow to node-red:
 ```
-sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update_universal.json
+sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScan/master/update_universal.json && sudo cp /home/pi/.node-red/flows_raspberrypi.json /home/pi/.node-red/flows.json
 ```
 
 Restart and done :))
