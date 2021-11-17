@@ -30,8 +30,8 @@ This small gypsum figurine was covered in black chalk spray in order to create e
 
 |Image Set|OpenScanCloud|RealityCapture|3DF Zephyr|Agisoft Metashape|Meshroom|VisualSFM|Regard3D|Autodesk Recap|MicMac|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|01 |✔ |✔ |   |   |   |   |   |   |✔ |
-|02 |✔ |   |✖ |   |   |   |✖  |✖  |✔ |
+|01 |✔ |✔ |   |✔  |   |   |   |   |✔ |
+|02 |✔ |   |✖ |✖  |   |   |✖  |✖  |✔ |
 
 ## Contribution & Attribution
 ### 02
