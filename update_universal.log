@@ -1,5 +1,6 @@
-2022-01-05
+2022-01-05-10.56
   MAJOR AND GREAT UPDATE!
+  Note, that the device will restart twice
   - added: OpenScanCloud - it is now possible to use the cloud processing capabilities and
     send your image set to the OpenScanCloud for reconstructing your 3d model
     This is totally free/donation-based and the only thing needed is a one-time-registration,
