@@ -1,3 +1,20 @@
+2022-01-05
+  MAJOR AND GREAT UPDATE!
+  - added: OpenScanCloud - it is now possible to use the cloud processing capabilities and
+    send your image set to the OpenScanCloud for reconstructing your 3d model
+    This is totally free/donation-based and the only thing needed is a one-time-registration,
+    which can be done through the user interface (settings)
+    
+  - added: help texts
+  - added: warning if used disk space is > 80%
+    
+  - improved: increased the framerate of the preview window
+  - improved: preview is in full-resolution, when cropx/y is larger then 40, which should help
+    setting the focus
+    
+  - removed: dev mode, as there has not been any improvements in over a year...
+
+
 2020-11-27-10.11
   This is a unified and simplified Firmware for both the OpenScan Classic and the OpenScan Mini
   - improved: overall stability & speed
