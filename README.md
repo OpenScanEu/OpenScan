@@ -1,5 +1,9 @@
 # OpenScan
 
+## This repository will be superseded by the following: [Github-OpenScan2](https://github.com/OpenScanEu/OpenScan2/), since I decided to rewrite the code and thus lay a cleaner foundation for future developments. Especially the new IMX519 camera will only be supported by the new firmware, so please feel free to [join the discussion and development](https://github.com/OpenScanEu/OpenScan2/) :)
+
+## Older Firmware (for stock pi cameras + OpenScan Mini/Classic):
+
 ## Overview:
 The Raspberry Pi + OpenScan Pi Shield can be used to control two independent stepper motors and a variety of different cameras (Pi Camera, DSLR - via GPhoto and external Cameras like Smartphone and others). The mechanism can be used in various forms (see for example https://www.thingiverse.com/thing:3050437 or https://www.thingiverse.com/thing:2944570 and it could be easily adapted to be used as a camera slider or in other mechanisms.
 
