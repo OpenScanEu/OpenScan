@@ -102,7 +102,7 @@ For more details see: https://nodered.org/docs/getting-started/raspberrypi
 Install NodeRed:
 
 ```
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+bash <(curl -sL https://github.com/node-red/linux-installers/releases/download/v1.0.0/update-nodejs-and-nodered-deb)
 ```
 
 Set NodeRed to start automatically on boot:
