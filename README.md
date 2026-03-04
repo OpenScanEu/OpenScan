@@ -1,6 +1,20 @@
-# OpenScan
+# OpenScan - accessible and affordable open-source 3D scanning 
+#
+#
+#
+#
+# This repository is outdated and the current firmware for various 3D scanner builds can be found here: https://github.com/OpenScan-org/OpenScan3/
 
-## This repository will be superseded by the following: [Github-OpenScan2](https://github.com/OpenScanEu/OpenScan2/), since I decided to rewrite the code and thus lay a cleaner foundation for future developments. Especially the new IMX519 camera will only be supported by the new firmware, so please feel free to [join the discussion and development](https://github.com/OpenScanEu/OpenScan2/) :)
+- OpenScan Classic / Mini
+- Greenshield, Blackshield, Custom Shield
+- OpenScan Midi / Custom
+- Arducam IMX519, Arducam Hawkeye, PiCamera v3
+#
+#
+#
+#
+
+
 
 ## Older Firmware (for stock pi cameras + OpenScan Mini/Classic):
 
